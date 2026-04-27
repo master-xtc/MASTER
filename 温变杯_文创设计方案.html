@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>温变杯-文创设计方案</title>
+    <style>
+        /* CSS变量定义 - 奢雅古典风格 */
+        :root {
+            /* 低饱和度奢雅色调 */
+            --primary-color: #8b7355;
+            --primary-dark: #5c4a3a;
+            --primary-light: #c9b8a5;
+            --secondary-color: #6b8b7a;
+            --secondary-light: #e8ebe9;
+            --accent-gold: #b8956e;
+            --accent-purple: #7b6b8b;
+            --accent-green: #5c7a6a;
+            --accent-gray: #7a7a7a;
+            
+            /* 中性色调 */
+            --text-color: #3d3d3d;
+            --text-secondary: #5a5a5a;
+            --text-light: #8a8a8a;
+            --text-muted: #a0a0a0;
+            
+            /* 背景色调 */
+            --bg-cream: #faf8f5;
+            --bg-warm: #f7f4f0;
+            --bg-sage: #f0ede8;
+            --bg-ivory: #fffff0;
+            
+            /* 阴影与光影 */
+            --shadow-soft: 0 4px 20px rgba(0,0,0,0.06);
+            --shadow-medium: 0 8px 30px rgba(0,0,0,0.08);
+            --shadow-elegant: 0 15px 50px rgba(0,0,0,0.1);
+            --shadow-gold: 0 4px 20px rgba(184,149,110,0.15);
+            --inner-shadow: inset 0 2px 4px rgba(0,0,0,0.04);
+            
+            /* 圆角 */
+            --border-radius: 24px;
+            --border-radius-small: 16px;
+            --border-radius-smaller: 12px;
+            
+            /* 间距变量 */
+            --spacing-xs: 12px;
+            --spacing-sm: 18px;
+            --spacing-md: 28px;
+            --spacing-lg: 40px;
+            --spacing-xl: 56px;
+            --spacing-xxl: 72px;
+            
+            /* 字体变量 */
+            --font-family: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+            --font-family-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            --font-size-xs: 0.8em;
+            --font-size-sm: 0.9em;
+            --font-size-md: 1em;
+            --font-size-lg: 1.15em;
+            --font-size-xl: 1.4em;
+            --font-size-xxl: 1.8em;
+            --font-size-xxxl: 2.5em;
+            
+            /* 动画变量 */
+            --transition-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-medium: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* 纹理 */
+            --texture-overlay: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b8956e' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            header {
+                padding: 40px 15px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .section,
+            .content-section,
+            .tech-section,
+            .submission-section,
+            .award-section,
+            .application-section {
+                padding: 25px;
+            }
+            
+            h2 {
+                font-size: 1.8em;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .gallery-item {
+                min-width: 100%;
+            }
+            
+            .gallery-image img {
+                height: 250px;
+            }
+            
+            .feature-grid,
+            .tech-grid,
+            .award-grid,
+            .application-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .application-item {
+                min-width: 100%;
+            }
+            
+            .application-image img {
+                height: 250px;
+            }
+            
+            .submission-item {
+                padding: 20px;
+            }
+            
+            .footer {
+                padding: 30px 15px;
+            }
+        }
+        
+        /* 小屏幕手机 */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6em;
+                line-height: 1.3;
+            }
+            
+            .subtitle {
+                font-size: 0.9em;
+                line-height: 1.4;
+            }
+            
+            h2 {
+                font-size: 1.3em;
+                line-height: 1.3;
+            }
+            
+            h3 {
+                font-size: 1.1em;
+            }
+            
+            h4 {
+                font-size: 1em;
+            }
+            
+            p {
+                font-size: 0.95em;
+                line-height: 1.6;
+            }
+            
+            .section,
+            .content-section,
+            .tech-section,
+            .submission-section,
+            .award-section,
+            .application-section {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .gallery-image img {
+                height: 180px;
+            }
+            
+            .application-image img {
+                height: 180px;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            header {
+                padding: 30px 10px;
+            }
+            
+            .product-info {
+                padding: 20px;
+            }
+            
+            .highlight-box {
+                padding: 20px;
+            }
+            
+            .tech-specs {
+                padding: 20px;
+            }
+            
+            .submission-item {
+                padding: 20px;
+            }
+            
+            .footer {
+                padding: 30px 10px;
+            }
+        }
+        
+        /* 移动端触摸优化 */
+        @media (hover: none) and (pointer: coarse) {
+            .gallery-item,
+            .feature-item,
+            .tech-item,
+            .award-card,
+            .application-item,
+            .section,
+            .content-section,
+            .tech-section,
+            .submission-section,
+            .award-section,
+            .application-section,
+            .footer {
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+                cursor: pointer;
+            }
+            
+            .gallery-item:active,
+            .feature-item:active,
+            .tech-item:active,
+            .award-card:active,
+            .application-item:active,
+            .section:active,
+            .content-section:active,
+            .tech-section:active,
+            .submission-section:active,
+            .award-section:active,
+            .application-section:active,
+            .footer:active {
+                transform: scale(0.98);
+            }
+        }
+        
+        /* 移动端性能优化 */
+        @media (max-width: 768px) {
+            .gallery-item:hover,
+            .application-item:hover {
+                transform: none;
+                box-shadow: var(--shadow-soft);
+            }
+            
+            .gallery-item:hover .gallery-image,
+            .application-item:hover .application-image {
+                transform: none;
+                box-shadow: none;
+            }
+            
+            .gallery-item:hover .gallery-image::before,
+            .gallery-item:hover .gallery-image::after,
+            .application-item:hover .application-image::before,
+            .application-item:hover .application-image::after {
+                display: none;
+            }
+            
+            .gallery-item:hover .gallery-image img,
+            .application-item:hover .application-image img {
+                transform: none;
+                opacity: 1;
+            }
+            
+            .gallery-image img,
+            .application-image img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: var(--border-radius-smaller);
+            }
+            
+            .gallery-item,
+            .application-item,
+            .feature-item,
+            .tech-item,
+            .award-card {
+                min-height: 44px;
+                touch-action: manipulation;
+            }
+            
+            body {
+                -webkit-overflow-scrolling: touch;
+                overflow-x: hidden;
+            }
+        }
+        
+        /* Safari 浏览器优化 */
+        @supports (-webkit-touch-callout: none) {
+            .gallery-item:hover .gallery-image::before,
+            .gallery-item:hover .gallery-image::after,
+            .application-item:hover .application-image::before,
+            .application-item:hover .application-image::after {
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+        }
+        
+        /* QQ浏览器优化 */
+        @media all and (min-width: 0) {
+            .container {
+                -webkit-tap-highlight-color: transparent;
+                tap-highlight-color: transparent;
+            }
+        }
+        
+        /* 全局样式 */
+        body {
+            font-family: var(--font-family-sans);
+            line-height: 1.8;
+            color: var(--text-color);
+            background: var(--bg-cream);
+            background-image: var(--texture-overlay);
+            min-height: 100vh;
+            padding: 20px 0;
+            position: relative;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=subtle%20paper%20texture%20scan%2C%20old%20vintage%20paper%2C%20light%20beige%20color%2C%20minimal%20texture%2C%20high%20resolution&image_size=square_hd');
+            background-size: cover;
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+            z-index: 1;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><defs><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter></defs><rect width="100" height="100" filter="url(%23noise)" opacity="0.03"/></svg>');
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+            padding: var(--spacing-xxl) var(--spacing-xl);
+            background: linear-gradient(145deg, #f8f5f0 0%, #ebe5db 50%, #e0d5c5 100%);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+            transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+            border: 1px solid rgba(184,149,110,0.15);
+        }
+        
+        header:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-elegant);
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-gold), var(--primary-color), var(--accent-gold));
+        }
+        
+        h1 {
+            font-family: var(--font-family);
+            font-size: 2.8em;
+            color: var(--primary-dark);
+            margin-bottom: var(--spacing-md);
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            letter-spacing: 0.08em;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+        }
+        
+        .subtitle:last-child {
+            color: var(--accent-gold);
+            font-weight: 500;
+            font-size: 1.3em;
+        }
+        
+        .section {
+            background: linear-gradient(145deg, #faf8f5 0%, #f5f0eb 100%);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-lg);
+            box-shadow: var(--shadow-soft);
+            transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+            border: 1px solid rgba(184,149,110,0.1);
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .product-info {
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-lg);
+            background: linear-gradient(145deg, #f8f5f0 0%, #ebe5db 100%);
+            border-radius: var(--border-radius-small);
+            border-left: 4px solid var(--accent-gold);
+            box-shadow: var(--inner-shadow);
+        }
+        
+        .product-info p {
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: var(--text-secondary);
+        }
+        
+        .product-info strong {
+            background: linear-gradient(90deg, var(--accent-gold), var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+        
+        h2 {
+            font-family: var(--font-family);
+            font-size: 2.2em;
+            color: var(--accent-gold);
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid rgba(184,149,110,0.2);
+            position: relative;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: #ff8e53;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .gallery-item {
+            background: #f0e8d8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #d3c7b0;
+            position: relative;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px) rotate(1deg);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-image {
+            position: relative;
+            width: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-item:hover .gallery-image::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: white;
+            border: 1px solid #d3c7b0;
+            z-index: -1;
+            transform: rotate(-2deg);
+        }
+        
+        .gallery-item:hover .gallery-image::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: #f5f1e9;
+            border: 1px solid #d3c7b0;
+            z-index: -2;
+            transform: rotate(1deg);
+        }
+        
+        .gallery-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* 图片加载优化 */
+        .gallery-image img,
+        .application-image img {
+            loading: lazy;
+            border-radius: 4px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* 移动端图片优化 */
+        @media (max-width: 768px) {
+            .gallery-image img,
+            .application-image img {
+                height: 200px;
+                object-fit: cover;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-image img,
+            .application-image img {
+                height: 180px;
+            }
+        }
+        
+        .gallery-item:hover .gallery-image img {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            font-size: 1.2em;
+            color: #ff6b6b;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .gallery-description {
+            font-size: 0.95em;
+            color: #6b5b47;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        .content-section {
+            background: #f5f1e9;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #d3c7b0;
+        }
+        
+        .content-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f0e8d8 0%, #e8e2d5 100%);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #ff8e53;
+            border: 1px solid #d3c7b0;
+        }
+        
+        .highlight-box h3 {
+            color: #ff6b6b;
+            margin: 0 0 15px 0;
+            font-size: 1.5em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+            color: #6b5b47;
+            line-height: 1.6;
+        }
+        
+        .content-section h3 {
+            color: #ff6b6b;
+            margin: 30px 0 15px;
+            font-size: 1.5em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .content-section p {
+            font-size: 1.05em;
+            line-height: 2;
+            color: #6b5b47;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .feature-item {
+            background: #f0e8d8;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #d3c7b0;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .feature-item h4 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .feature-item p {
+            color: #6b5b47;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .tech-section {
+            background: #f5f1e9;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #d3c7b0;
+        }
+        
+        .tech-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .tech-item {
+            background: linear-gradient(135deg, #f0e8d8 0%, #e8e2d5 100%);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #d3c7b0;
+        }
+        
+        .tech-item h4 {
+            color: #ff6b6b;
+            margin-bottom: 12px;
+            font-size: 1.15em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .tech-item p {
+            color: #6b5b47;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .tech-specs {
+            background: #f0e8d8;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-left: 4px solid #ff8e53;
+            border: 1px solid #d3c7b0;
+        }
+        
+        .tech-specs h4 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .spec-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .spec-list li {
+            padding: 8px 0;
+            color: #6b5b47;
+            border-bottom: 1px dashed #d3c7b0;
+        }
+        
+        .spec-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .spec-list strong {
+            color: #ff6b6b;
+            display: inline-block;
+            width: 120px;
+            font-weight: 600;
+        }
+        
+        .submission-section {
+            background: #f5f1e9;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #d3c7b0;
+        }
+        
+        .submission-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .submission-item {
+            margin-bottom: 35px;
+            padding: 30px;
+            background: #f0e8d8;
+            border-radius: 8px;
+            border-left: 4px solid #ff8e53;
+            border: 1px solid #d3c7b0;
+        }
+        
+        .submission-item h4 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .submission-item p {
+            color: #6b5b47;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .submission-item ul {
+            margin-left: 20px;
+            color: #6b5b47;
+        }
+        
+        .submission-item li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #6b5b47;
+        }
+        
+        .file-format {
+            display: inline-block;
+            background: #e8e2d5;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #ff6b6b;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #d3c7b0;
+        }
+        
+        .award-section {
+            background: linear-gradient(135deg, #f0e8d8 0%, #e8e2d5 100%);
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid #ff8e53;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .award-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .award-section h2 {
+            color: #ff6b6b;
+            border-bottom-color: #ff8e53;
+        }
+        
+        .award-section h2::after {
+            background: #ff8e53;
+        }
+        
+        .award-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .award-card {
+            background: #f5f1e9;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid #d3c7b0;
+        }
+        
+        .award-card h4 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .award-card p {
+            color: #6b5b47;
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        .competition-fit {
+            background: #f0e8d8;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid #d3c7b0;
+        }
+        
+        .competition-fit h4 {
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .fit-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .fit-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #d3c7b0;
+            color: #6b5b47;
+            line-height: 1.7;
+        }
+        
+        .fit-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .fit-list strong {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: var(--spacing-xl);
+            padding: var(--spacing-xl);
+            background: linear-gradient(145deg, #f8f5f0 0%, #ebe5db 50%, #e0d5c5 100%);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+            border: 1px solid rgba(184,149,110,0.1);
+        }
+        
+        .footer:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-elegant);
+        }
+        
+        .footer p {
+            color: var(--text-secondary);
+            margin: var(--spacing-xs) 0;
+            font-size: var(--font-size-md);
+        }
+        
+        .footer .copyright {
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(184,149,110,0.15);
+            font-size: var(--font-size-sm);
+            color: var(--accent-gold);
+        }
+        
+        .application-section {
+            background: linear-gradient(145deg, #f8f8f8 0%, #f0f0f0 100%);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-lg);
+            box-shadow: var(--shadow-soft);
+            transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+            border: 1px solid rgba(184,149,110,0.1);
+        }
+        
+        .application-section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .application-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .application-item {
+            background: #f0e8d8;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #d3c7b0;
+        }
+        
+        .application-item:hover {
+            transform: translateY(-5px) rotate(1deg);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .application-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .application-item:hover .application-image {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .application-item:hover .application-image::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: white;
+            border: 1px solid #d3c7b0;
+            z-index: -1;
+            transform: rotate(-2deg);
+        }
+        
+        .application-item:hover .application-image::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: #f5f1e9;
+            border: 1px solid #d3c7b0;
+            z-index: -2;
+            transform: rotate(1deg);
+        }
+        
+        .application-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .application-item:hover .application-image img {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+        
+        .application-content {
+            padding: 30px;
+        }
+        
+        .application-content h4 {
+            color: #ff6b6b;
+            margin-bottom: 18px;
+            font-size: 1.3em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .application-content p {
+            color: #6b5b47;
+            line-height: 1.7;
+            margin: 0;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌅 橙心向阳·温变杯</h1>
+            <p class="subtitle">心之轨迹 | 温度与情感的治愈之旅</p>
+            <p class="subtitle">2026年"橙心向阳"心理主题文创设计大赛 参赛作品</p>
+            <p class="subtitle">✨ 参赛团队：心暖创意工作室</p>
+        </header>
+        
+        <!-- 大赛通知 -->
+        <section class="section">
+            <h2>📢 大赛通知</h2>
+            <div class="highlight-box">
+                <h3>关于举办湖南城市学院 2026 年"橙心向阳"心理主题文创设计大赛的通知</h3>
+                <p>为深入贯彻教育部思想政治工作司及中共湖南省委教育工委相关文件精神，进一步落实我校"润心养性·启智益德"心理育人理念，引导广大学生关注心理健康、提升心理素养，用创意设计表达内心情感，现决定举办 2026 年"橙心向阳"心理主题文创设计大赛。本次大赛作为第二十二届"五月心晴"心理健康系列活动的开端，旨在通过文创载体加强心理知识宣传，挖掘创意作品的积极疗愈价值。</p>
+            </div>
+            
+            <h3>一、活动主题</h3>
+            <p>"橙心向阳"心理主题文创设计大赛</p>
+            
+            <h3>二、活动对象</h3>
+            <p>湖南城市学院全体学生（含本科生、研究生、留学生）个人或团队形式均可，团队人数不超过 4 人</p>
+            
+            <h3>三、组织单位</h3>
+            <p>主办单位：学生工作部（处）<br>
+            承办单位：大学生心理健康教育中心<br>
+            协办单位：心理素养提升协会</p>
+            
+            <h3>四、作品要求</h3>
+            <p><strong>（一）作品类型</strong></p>
+            <p>围绕心理健康主题展开，包括但不限于情绪管理、自我认知、人际关系、生命成长、心理援助知识等。作品分为以下两类：</p>
+            <p>1.宣传作品类<br>
+            内容：重点宣传心理援助方式（学校心理咨询方式、全国心理援助热线、湖南省心理援助热线）、普及心理健康知识（如精神疾病知识、情绪调节技巧、非暴力沟通、亲子关系等）。<br>
+            形式：海报、手册、展板、易拉宝等。</p>
+            <p>2.实体文创类<br>
+            内容：基于日常生活的实用物品进行设计，通过造型、功能或寓意传递积极心理力量。<br>
+            形式：包括但不限于工艺摆件、台历、帆布袋、鼠标垫、文件袋、水杯、解压玩具、笔记本、徽章等。可结合湖南城市学院心理健康教育中心 LOGO 和校园文化元素进行创作。</p>
+            
+            <p><strong>（二）创作要求</strong></p>
+            <p>1.主题鲜明：作品须紧扣心理健康，体现科学性、艺术性和疗愈价值。<br>
+            2.未公开发表，建议使用免费商用的字体、图案，避免后续版权纠纷。<br>
+            3.落地可行：实体文创类作品需考虑生产工艺和成本，避免过于复杂的结构。<br>
+            4.设计说明：在报名表中阐述设计思路、心理寓意和创意亮点（500 字内）。</p>
+            
+            <h3>五、奖项设置</h3>
+            <p>1.宣传作品类：一等奖 2 名（奖金 200 元）、二等奖 3 名（奖金 100 元）、三等奖 5 名（文创大礼包）<br>
+            2.实体文创类：一等奖 2 名（奖金 300 元）、二等奖 3 名（奖金 200 元）、三等奖 5 名（100 元）</p>
+            
+            <h3>六、提交方式</h3>
+            <p><strong>（一）提交邮箱</strong></p>
+            <p>请将作品与报名表（附件 1）压缩打包发送至：1376626192@qq.com<br>
+            邮件主题和压缩包命名格式统一为：作品类型+学院+姓名+作品名称<br>
+            示例：宣传作品类+土木工程学院+张三+心理援助指南</p>
+            
+            <p><strong>（二）提交要求</strong></p>
+            <p>1.设计图纸：高清原图 JPEG、JPG 或 PNG，分辨率不低于 300dpi，色彩模式为 CMYK（印刷标准），若初始创意为手绘制图，须扫描后提交。<br>
+            2.原始设计文件：PSD、AI 或 CDR 等源文件，必须保留图层、矢量路径，以便后续进行打样和生产。<br>
+            3.落地模拟图：实体文创类的作品可选择提交 3D 效果图，展示该设计在实物上的应用效果，若有实物可提交照片。</p>
+            
+            <p><strong>（三）截止时间</strong></p>
+            <p>2026 年 4 月 28 日（星期二）17:00 前提交</p>
+            
+            <h3>七、评审要点</h3>
+            <p>1.主题性：准确捕捉心理健康教育主题，传递温暖、共鸣或疗愈力量。<br>
+            2.创意性：设计具有独特性和新颖性，视觉表现符合当下审美潮流。<br>
+            3.实用性：便于制作成实物，日常使用频率高，工艺成本可控。<br>
+            4.完整性：设计说明清晰，提交资料齐全。<br>
+            5.校园文化特色：巧妙融入城院及心理中心元素。</p>
+            
+            <h3>八、注意事项</h3>
+            <p>1.参赛作品使用权归心理健康教育中心所有（可用于宣传、展览、制作礼品等），作者享有署名权。<br>
+            2.若作品涉及抄袭、盗用等侵权行为，由作者自行承担全部法律责任，与主办方无关。<br>
+            3.未按要求提交源文件或格式错误的，取消评奖资格（因无法制作实物）。<br>
+            4.本次大赛最终解释权归心理健康教育中心所有。<br>
+            5.为方便沟通交流，参赛选手可加入 QQ 群：1070891225。</p>
+        </section>
+        
+        <!-- 产品价值与市场定位 -->
+        <section class="section">
+            <h2>🌟 产品价值与市场定位</h2>
+            <div class="highlight-box">
+                <h3>为什么选择橙心向阳·温变杯？</h3>
+                <p>在竞争激烈的文创市场中，我们的温变杯以独特的温度感应设计脱颖而出。它不仅是一个实用的饮水容器，更是一件具有情感表达功能的艺术作品。通过温度变化呈现不同的视觉效果，使用者可以获得惊喜的视觉体验，这是市场上其他产品无法提供的核心价值。</p>
+                <p>橙心向阳·温变杯将温度变化与情感表达相结合，通过温暖的橙色和"听见心声"的文字，传递出心理健康的积极理念，帮助使用者关注内心世界，建立积极的心理状态。这种将功能性与情感体验相结合的设计，满足了当代人对个性化生活方式的追求，同时也为心理健康教育提供了新的载体。</p>
+            </div>
+            
+            <h3>🎯 目标用户群体</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h4>🎓 大学生群体</h4>
+                    <p>追求个性与创意，喜欢独特设计的年轻人。他们注重自我表达，对新鲜事物充满好奇心，温变杯的独特设计和互动体验能够满足他们的需求。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>💼 职场人士</h4>
+                    <p>在快节奏工作中寻求生活小确幸，注重生活品质。他们面临工作压力，温变杯的温度变化效果能够帮助他们缓解压力，调整情绪，成为工作中的减压神器。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>❤️ 情侣/朋友</h4>
+                    <p>作为表达情感的礼物，传递温暖与关怀。温变杯的温度变化效果象征着情感的温暖，是表达爱意和友情的理想选择。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🎨 文创爱好者</h4>
+                    <p>追求独特设计和文化内涵的收藏者。他们注重产品的设计价值和文化意义，温变杯的创意设计和品牌故事能够满足他们的需求。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🏫 学校教职工</h4>
+                    <p>关注学生心理健康，需要有效的心理健康教育工具。温变杯可以作为心理健康教育的载体，帮助学生关注内心世界，建立积极的心理状态。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🧠 心理健康爱好者</h4>
+                    <p>关注心理健康，寻求自我成长的人群。温变杯的设计理念和情感表达功能能够与他们产生共鸣，成为他们日常生活中的心理疗愈工具。</p>
+                </div>
+            </div>
+            
+            <h3>📊 市场需求分析</h3>
+            <div class="highlight-box">
+                <p>根据市场调研，现代社会中人们对个性化、情感化的产品需求日益增长。传统的马克杯已经无法满足消费者对独特体验的追求。我们的温变杯将温度变化与情感表达相结合，用户可以在使用过程中感受到温度带来的视觉变化，这种将功能性与情感体验相结合的设计，满足了当代人对个性化生活方式的追求。</p>
+                <p>同时，随着心理健康意识的提高，人们对心理健康产品的需求也在增加。橙心向阳·温变杯通过温度变化的视觉效果，传递出心理健康的积极理念，帮助使用者关注内心世界，建立积极的心理状态，这种具有心理疗愈价值的产品，符合市场的需求趋势。</p>
+                <p>此外，校园文化产品市场也在不断发展，学生对具有校园特色的文创产品需求旺盛。橙心向阳·温变杯融入了湖南城市学院的校园文化元素，增强了产品的归属感和认同感，符合校园文化产品的市场需求。</p>
+            </div>
+            
+            <h3>💎 产品核心价值</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h4>🌟 情感表达</h4>
+                    <p>通过温度变化的视觉效果，传递温暖与关怀的情感，成为情感表达的载体。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🧠 心理疗愈</h4>
+                    <p>通过温变效果和"听见心声"的文字，提醒使用者关注内心世界，帮助缓解压力，调整情绪。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🎨 创意设计</h4>
+                    <p>独特的温变效果和迷宫心形设计，展现了创意与艺术的结合，具有较高的审美价值。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🏫 校园文化</h4>
+                    <p>融入湖南城市学院的校园文化元素，增强了产品的归属感和认同感。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🔧 实用功能</h4>
+                    <p>作为日常饮水容器，具有实用功能，同时通过温变效果增加了使用的趣味性。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>💖 品牌价值</h4>
+                    <p>传递温暖与关怀的品牌价值观，成为心理健康教育的重要载体。</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>📸 产品展示</h2>
+            <div class="product-info">
+                <p><strong>作品类型：</strong>实体文创类</p>
+                <p><strong>设计主题：</strong>心之轨迹·温变杯 | 温度与情感的交融</p>
+                <p><strong>核心工艺：</strong>温变油墨技术，通过温度感应实现颜色变化</p>
+                <p><strong>设计理念：</strong>以迷宫心形为设计元素，通过温度变化引导使用者感受情感的温度，象征着在人生旅程中寻找自我的过程，最终找到内心的温暖与真爱</p>
+                <p><strong>品牌价值：</strong>传递温暖与关怀，帮助使用者关注内心世界，建立积极的心理状态</p>
+                <p><strong>目标受众：</strong>湖南城市学院全体学生、教职工及心理健康爱好者</p>
+            </div>
+            <div class="gallery">
+                <!-- 常温状态 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=product%20photography%20of%20a%20matte%20black%20ceramic%20mug%20on%20dark%20walnut%20table%2C%20with%20an%20open%20leather%20notebook%20and%20a%20cup%20of%20hot%20coffee%20beside%20it%2C%20soft%20side%20light%20from%20upper%20left%20creating%20elegant%20highlight%20on%20the%20mug%2C%20maze%20heart%20logo%20on%20front%20in%20低调%20dark%20gray%20almost%20blending%20with%20the%20mug%2C%20quiet%20and%20textured%20atmosphere%2C%20professional%20product%20photography&image_size=landscape_4_3" alt="常温状态">
+                    </div>
+                    <div class="gallery-caption">常温状态</div>
+                    <div class="gallery-description">哑光黑色陶瓷马克杯静置于深色胡桃木桌面上，杯旁有一本摊开的皮质笔记本和一杯冒着热气的咖啡，柔和的侧光从左上方照来，在杯身上形成优雅的高光，杯身正面的迷宫心形标志呈现为低调的深灰色，几乎与杯身融为一体。这种低调的设计，象征着内心的平静与内敛，等待着温暖的唤醒。</div>
+                </div>
+                
+                <!-- 热水注入后 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=product%20photography%20of%20a%20black%20mug%20with%20hot%20water%20inside%2C%20white%20steam%20rising%20from%20the%20mug%2C%20maze%20heart%20logo%20on%20front%20turned%20bright%20warm%20orange%20due%20to%20heat%2C%20glowing%20white%20text%20%22听见心声%22%20appearing%20below%20the%20logo%2C%20the%20mug%20looks%20illuminated%2C%20warm%20and%20healing%20feeling%2C%20background%20blurred%2C%20focus%20on%20the%20color-changing%20logo%2C%20professional%20product%20photography&image_size=landscape_4_3" alt="热水注入后">
+                    </div>
+                    <div class="gallery-caption">热水注入后</div>
+                    <div class="gallery-description">同一个黑色马克杯，杯中已注入热水，正升腾起袅袅的白色蒸汽，杯身正面的迷宫心形标志受热后变为鲜艳的暖橙色，下方浮现出发光的白色文字“听见心声”，整个杯子仿佛被点亮，散发出温暖治愈的感觉。这种温度变化的视觉效果，象征着内心的温暖被唤醒，提醒使用者关注自己的内心世界。</div>
+                </div>
+                
+                <!-- 背面设计 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=close-up%20product%20photography%20of%20the%20back%20of%20a%20black%20mug%2C%20showing%20a%20simple%20cartoon-style%20orange%20character%20%22心小橙%22%20hugging%20the%20mug%20handle%2C%20simple%20and%20cute%20lines%2C%20contrasting%20with%20the%20mystery%20of%20the%20front%2C%20professional%20product%20photography%2C%20soft%20lighting&image_size=landscape_4_3" alt="背面设计">
+                    </div>
+                    <div class="gallery-caption">背面设计</div>
+                    <div class="gallery-description">马克杯的背面局部特写，一个简笔画风格的橙色小人“心小橙”正抱着杯柄，仿佛在给杯子一个温暖的拥抱，线条简约可爱，与正面的神秘感形成对比。这个卡通形象不仅增加了产品的趣味性，也传递出温暖与关怀的情感，成为品牌的重要识别元素。</div>
+                </div>
+                
+                <!-- 包装设计 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=product%20photography%20of%20a%20gift%20box%20for%20a%20ceramic%20mug%2C%20warm%20orange%20and%20black%20color%20scheme%2C%20maze%20heart%20logo%20on%20the%20box%2C%20elegant%20and%20minimalist%20design%2C%20professional%20product%20photography&image_size=landscape_4_3" alt="包装设计">
+                    </div>
+                    <div class="gallery-caption">包装设计</div>
+                    <div class="gallery-description">产品的包装设计采用温暖的橙色和黑色配色方案，与产品的设计风格保持一致。包装盒上印有迷宫心形标志和品牌名称“橙心向阳”，整体设计简约优雅，符合现代审美。包装不仅保护产品，也是品牌形象的重要载体，传递出温暖与关怀的情感。</div>
+                </div>
+                
+                <!-- 多角度展示 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=product%20photography%20of%20a%20black%20ceramic%20mug%20from%20side%20angle%2C%20showing%20the%20smooth%20curve%20and%20elegant%20shape%2C%20soft%20lighting%2C%20professional%20product%20photography&image_size=landscape_4_3" alt="侧面展示">
+                    </div>
+                    <div class="gallery-caption">侧面展示</div>
+                    <div class="gallery-description">马克杯的侧面展示，展现了杯子流畅的曲线和优雅的造型。哑光黑色的釉面质感细腻，手感温润，符合现代人对生活品质的追求。侧面视角更能体现杯子的立体感和设计美感。</div>
+                </div>
+                
+                <!-- 细节特写 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=close-up%20product%20photography%20of%20the%20maze%20heart%20logo%20on%20a%20black%20ceramic%20mug%2C%20showing%20the%20detailed%20pattern%20and%20smooth%20finish%2C%20soft%20lighting%2C%20professional%20product%20photography&image_size=landscape_4_3" alt="细节特写">
+                    </div>
+                    <div class="gallery-caption">细节特写</div>
+                    <div class="gallery-description">马克杯上迷宫心形标志的细节特写，展现了图案的精细做工和光滑的表面质感。迷宫的线条清晰流畅，心形的设计寓意深刻，体现了产品的创意和工艺品质。</div>
+                </div>
+                
+                <!-- 使用场景展示 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=student%20using%20black%20ceramic%20mug%20in%20library%2C%20focused%20on%20study%2C%20warm%20lighting%2C%20cozy%20atmosphere&image_size=landscape_4_3" alt="图书馆使用场景">
+                    </div>
+                    <div class="gallery-caption">图书馆使用场景</div>
+                    <div class="gallery-description">学生在图书馆使用橙心向阳·温变杯的场景。杯子放在书桌上，学生专注于学习，温暖的光线照射在杯子上，营造出舒适的学习氛围。温变杯成为学习过程中的贴心伴侣，帮助学生保持良好的学习状态。</div>
+                </div>
+                
+                <!-- 办公室使用场景 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=office%20worker%20using%20black%20ceramic%20mug%20at%20desk%2C%20relaxed%20expression%2C%20modern%20office%20environment%2C%20warm%20lighting&image_size=landscape_4_3" alt="办公室使用场景">
+                    </div>
+                    <div class="gallery-caption">办公室使用场景</div>
+                    <div class="gallery-description">职场人士在办公室使用橙心向阳·温变杯的场景。杯子放在办公桌上，使用者表情放松，现代办公环境中，温变杯成为缓解工作压力的神器，帮助职场人士在快节奏的工作中保持平衡。</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 设计理念与核心文案 -->
+        <section class="content-section">
+            <h2>💡 设计理念与核心文案</h2>
+            
+            <div class="highlight-box">
+                <h3>核心创意：温度感应的"心之轨迹"</h3>
+                <p>
+                    本设计以"心之轨迹"为核心创意，将迷宫心形图案通过温变油墨技术呈现在杯身表面。当使用者注入热水时，杯身的温度感应图案会从低调的深灰色变为鲜艳的暖橙色，同时浮现出"听见心声"的文字，这种温度与视觉的交互不仅是一种感官体验，更是一种情感表达——象征着在人生旅程中寻找自我、感受温暖的过程。
+                </p>
+                <p>
+                    设计灵感源于湖南城市学院心理健康教育中心的迷宫心形LOGO，结合"橙心向阳"的主题，通过温度变化的视觉效果，传递出心理健康的积极理念。每一次温度的变化，都是一次心灵的触动，让使用者在日常生活中感受到温暖与关怀。
+                </p>
+            </div>
+            
+            <h3>📝 设计说明文案</h3>
+            <p>
+                <strong>【作品名称】</strong>橙心向阳·温变杯
+            </p>
+            <p>
+                <strong>【设计思路】</strong>
+                作品灵感源自心理健康教育中心的迷宫心形LOGO，结合温变油墨技术，创造出具有温度感应效果的文创产品。杯身采用哑光黑色陶瓷材质，表面通过特殊的温变油墨印刷，形成迷宫心形图案。当注入热水时，图案会发生颜色变化，呈现出温暖的橙色和"听见心声"的文字，传递心理健康的理念。
+            </p>
+            <p>
+                <strong>【心理寓意】</strong>
+                迷宫象征着人生的旅程，每个人都在不断探索中成长。当热水注入杯子，温度带来的颜色变化象征着内心的温暖被唤醒，"听见心声"的文字则提醒使用者关注自己的内心世界，传递出"感受温暖，倾听心声"的积极信息。
+            </p>
+            <p>
+                <strong>【创意亮点】</strong>
+                1. 温度感应：通过温变油墨技术实现颜色变化，增强用户与产品的互动性；
+                2. 情感表达：温度变化带来的视觉效果，传递温暖与关怀的情感；
+                3. 材质选择：哑光黑色陶瓷不仅质感高级，也让温变效果更加突出；
+                4. 主题融合：巧妙结合心理健康教育中心的LOGO元素，传递心理关怀理念；
+                5. 校园文化：融入湖南城市学院的校园文化元素，增强归属感。
+            </p>
+            
+            <h3>🏷️ 品牌识别系统</h3>
+            <div class="highlight-box">
+                <h4>品牌名称：橙心向阳</h4>
+                <p>品牌名称"橙心向阳"寓意着阳光、温暖和希望，与心理健康的主题高度契合。橙色象征着活力、温暖和积极的情绪，"心"代表着心理健康和情感关怀，"向阳"则表达了积极向上、追求阳光的生活态度。</p>
+                
+                <h4>品牌标志：迷宫心形</h4>
+                <p>品牌标志采用迷宫心形设计，融合了湖南城市学院心理健康教育中心的LOGO元素。迷宫象征着人生的探索过程，心形代表着情感和关怀，两者结合体现了在人生旅程中寻找内心温暖的主题。</p>
+                
+                <h4>品牌色彩：温暖橙</h4>
+                <p>品牌色彩以温暖的橙色为主色调，象征着阳光、温暖和积极的情绪。橙色不仅在视觉上给人温暖的感觉，也与心理健康的主题高度契合，传递出积极向上的心理状态。</p>
+                
+                <h4>品牌口号：听见心声，温暖相伴</h4>
+                <p>品牌口号"听见心声，温暖相伴"简洁有力，直接表达了产品的核心价值：通过温度变化的视觉效果，提醒使用者关注自己的内心世界，同时传递出温暖与关怀的情感。</p>
+                
+                <h4>品牌价值观：</h4>
+                <ul>
+                    <li><strong>温暖关怀</strong>：传递温暖与关怀的情感，帮助使用者建立积极的心理状态</li>
+                    <li><strong>创新体验</strong>：通过温变技术创造独特的使用体验，增强用户与产品的互动</li>
+                    <li><strong>校园文化</strong>：融入湖南城市学院的校园文化元素，增强归属感和认同感</li>
+                    <li><strong>心理健康</strong>：传递心理健康的积极理念，帮助使用者关注内心世界</li>
+                    <li><strong>品质生活</strong>：通过高品质的产品，提升用户的生活品质</li>
+                </ul>
+            </div>
+            
+            <h3>✨ 设计亮点解析</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h4>🎯 温度互动</h4>
+                    <p>
+                        当热水注入杯子，温度变化触发颜色转变，这种互动体验让使用者感受到产品的生命力。每次使用都是一次惊喜的发现，让日常饮水变得更加有趣。温度的变化不仅是视觉上的享受，更是一种心理上的疗愈。
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h4>🎨 视觉美学</h4>
+                    <p>
+                        哑光黑色的杯身与温暖的橙色形成鲜明对比，当温度变化时，整个杯子仿佛被赋予了生命，从低调内敛到热情绽放，呈现出独特的视觉效果。这种视觉上的变化，象征着内心从平静到温暖的转变。
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h4>🤝 情感连接</h4>
+                    <p>
+                        温变效果不仅仅是视觉上的变化，更是情感的传递。当杯子从黑色变为橙色，仿佛在传递温暖与关怀，与使用者建立情感连接，成为日常生活中的温暖陪伴。这种情感连接，有助于使用者建立积极的心理状态。
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h4>🔧 技术创新</h4>
+                    <p>
+                        采用先进的温变油墨技术，确保颜色变化的准确性和持久性。这种技术不仅提升了产品的质感，也为文创设计提供了新的可能性。技术的创新，使得产品更加符合现代消费者的需求。
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h4>🏫 校园文化融合</h4>
+                    <p>
+                        巧妙融入湖南城市学院的校园文化元素，将心理健康教育中心的LOGO与温变效果相结合，增强了产品的归属感和认同感。这种校园文化的融合，使得产品更具特色和意义。
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h4>🌟 疗愈价值</h4>
+                    <p>
+                        产品不仅具有实用功能，更具有心理疗愈价值。通过温度变化的视觉效果，传递出积极的心理信息，帮助使用者缓解压力，调整情绪，达到心理疗愈的效果。这种疗愈价值，是产品的核心竞争力。
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 产品优势与销售卖点 -->
+        <section class="section">
+            <h2>✨ 产品优势与核心竞争力</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h4>🌟 独特的温度感应技术</h4>
+                    <p>采用先进的温变油墨技术，创造出随温度变化的视觉效果，让用户在使用过程中获得惊喜的体验。这种独特的互动方式是我们产品的核心竞争力，也是市场上其他产品无法复制的优势。每一次温度的变化，都是一次心灵的触动。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🏆 高品质材质与工艺</h4>
+                    <p>选用优质陶瓷，质地细腻，手感温润，符合现代人对生活品质的追求。环保无毒，安全健康，可直接接触食物，让用户使用更加放心。采用先进的制作工艺，确保产品的质量和持久性。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🎨 精美的外观设计</h4>
+                    <p>简约现代的设计风格，哑光黑色的杯身搭配迷宫心形图案，既美观大方又富有内涵。温度变化时的视觉效果更是增添了产品的独特魅力，从低调内敛到热情绽放，呈现出独特的视觉体验。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>❤️ 情感表达与疗愈功能</h4>
+                    <p>温度变化带来的视觉效果，成为情感表达的载体。无论是送给朋友还是自己使用，都能传递温暖与关怀的情感，增加产品的情感价值。同时，产品具有心理疗愈功能，帮助使用者缓解压力，调整情绪。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🏫 校园文化融合</h4>
+                    <p>巧妙融入湖南城市学院的校园文化元素，将心理健康教育中心的LOGO与温变效果相结合，增强了产品的归属感和认同感。这种校园文化的融合，使得产品更具特色和意义，成为校园文化的重要载体。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🌍 市场潜力巨大</h4>
+                    <p>随着人们对心理健康的重视和对个性化产品的需求增加，温变杯具有巨大的市场潜力。不仅可以作为个人使用的日常用品，还可以作为学校、企业的礼品和纪念品，市场前景广阔。</p>
+                </div>
+            </div>
+            
+            <h3>与竞品的对比优势</h3>
+            <div class="highlight-box">
+                <p>相比市场上的普通马克杯和其他文创产品，我们的温变杯具有以下优势：</p>
+                <ul>
+                    <li><strong>互动性更强</strong>：温度感应带来的视觉变化，增强用户与产品的互动，创造独特的使用体验</li>
+                    <li><strong>设计更独特</strong>：温变效果结合心理健康主题，市场独一无二，具有较高的辨识度</li>
+                    <li><strong>情感价值更高</strong>：温度变化传递温暖与关怀，具有深层情感内涵，满足消费者的情感需求</li>
+                    <li><strong>疗愈功能突出</strong>：结合心理健康主题，具有心理疗愈价值，帮助使用者缓解压力，调整情绪</li>
+                    <li><strong>校园文化特色</strong>：融入湖南城市学院的校园文化元素，增强归属感和认同感</li>
+                    <li><strong>品质更卓越</strong>：选用优质材料，精工制作，确保产品的质量和持久性</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- 使用场景与用户反馈 -->
+        <section class="section">
+            <h2>🌍 使用场景与用户反馈</h2>
+            
+            <h3>理想使用场景</h3>
+            <div class="application-grid">
+                <div class="application-item">
+                    <div class="application-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=student%20studying%20in%20library%20using%20black%20ceramic%20mug%2C%20focused%20expression%2C%20warm%20lighting%2C%20cozy%20atmosphere&image_size=landscape_4_3" alt="学习场景">
+                    </div>
+                    <div class="application-content">
+                        <h4>📚 学习时光</h4>
+                        <p>在图书馆或自习室学习时，注入热水后杯子的颜色变化带来惊喜，缓解学习压力，提高专注力。每一次喝水都是一次短暂的愉悦体验，让学习更加高效。温变杯成为学习过程中的贴心伴侣，帮助学生保持良好的学习状态。</p>
+                    </div>
+                </div>
+                <div class="application-item">
+                    <div class="application-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=office%20worker%20using%20black%20ceramic%20mug%20at%20desk%2C%20relaxed%20expression%2C%20modern%20office%20environment&image_size=landscape_4_3" alt="办公场景">
+                    </div>
+                    <div class="application-content">
+                        <h4>💼 办公休息</h4>
+                        <p>在紧张的工作间隙，端起温变杯，注入热水后观察颜色变化，快速缓解工作压力，调整状态，以更饱满的精神投入到工作中。温变杯成为职场人士的减压神器，帮助他们在快节奏的工作中保持平衡。</p>
+                    </div>
+                </div>
+                <div class="application-item">
+                    <div class="application-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=friend%20gathering%20with%20black%20ceramic%20mugs%2C%20lively%20conversation%2C%20cozy%20cafe%20setting&image_size=landscape_4_3" alt="社交场景">
+                    </div>
+                    <div class="application-content">
+                        <h4>🎉 社交聚会</h4>
+                        <p>在朋友聚会或咖啡厅小坐时，温变杯成为话题焦点，独特的温度变化效果引发大家的兴趣，成为社交场合的亮点。温变杯不仅是一个饮水容器，更是社交互动的催化剂，增进朋友之间的情感交流。</p>
+                    </div>
+                </div>
+                <div class="application-item">
+                    <div class="application-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=person%20enjoying%20hot%20drink%20with%20black%20ceramic%20mug%2C%20peaceful%20expression%2C%20soft%20lighting%2C%20minimalist%20room&image_size=landscape_4_3" alt="日常使用场景">
+                    </div>
+                    <div class="application-content">
+                        <h4>🏠 日常使用</h4>
+                        <p>作为日常饮水的伴侣，每次使用都能感受到温度带来的惊喜变化，让平凡的日常生活增添一抹色彩，成为生活中的小确幸。温变杯融入日常生活的点点滴滴，成为用户的贴心伙伴。</p>
+                    </div>
+                </div>
+                <div class="application-item">
+                    <div class="application-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=person%20meditating%20with%20black%20ceramic%20mug%2C%20peaceful%20expression%2C%20soft%20lighting%2C%20minimalist%20room&image_size=landscape_4_3" alt="冥想场景">
+                    </div>
+                    <div class="application-content">
+                        <h4>🧘‍♀️ 冥想放松</h4>
+                        <p>在冥想或放松时，温变杯成为辅助工具，通过温度变化的视觉效果，帮助用户进入平静的状态。温变杯的颜色变化过程，象征着内心从浮躁到平静的转变，成为冥想过程中的心灵伴侣。</p>
+                    </div>
+                </div>
+                <div class="application-item">
+                    <div class="application-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=gift%20giving%20scene%20with%20black%20ceramic%20mug%2C%20warm%20atmosphere%2C%20happy%20expressions&image_size=landscape_4_3" alt="礼品场景">
+                    </div>
+                    <div class="application-content">
+                        <h4>🎁 礼品赠送</h4>
+                        <p>作为礼品赠送给朋友或家人，温变杯传递着温暖与关怀的情感。独特的设计和温度变化效果，让礼品更具意义和纪念价值，成为表达情感的理想选择。</p>
+                    </div>
+                </div>
+                <div class="application-item">
+                    <div class="application-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=person%20reading%20book%20with%20black%20ceramic%20mug%20beside%2C%20cozy%20home%20setting%2C%20warm%20lighting&image_size=landscape_4_3" alt="阅读场景">
+                    </div>
+                    <div class="application-content">
+                        <h4>📖 阅读时光</h4>
+                        <p>在阅读时，温变杯成为最佳伴侣。一边阅读，一边感受杯子的温度变化，让阅读体验更加丰富。温变杯的存在，为阅读时光增添了一份温暖与宁静，让人心境平和，更加专注于书籍的内容。</p>
+                    </div>
+                </div>
+                <div class="application-item">
+                    <div class="application-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=person%20working%20from%20home%20with%20black%20ceramic%20mug%2C%20comfortable%20home%20office%20setting%2C%20warm%20lighting&image_size=landscape_4_3" alt="居家办公场景">
+                    </div>
+                    <div class="application-content">
+                        <h4>🏡 居家办公</h4>
+                        <p>在居家办公时，温变杯成为工作中的贴心伙伴。注入热水后，杯子的颜色变化带来惊喜，缓解工作压力，让居家办公的环境更加温馨舒适。温变杯的存在，为居家办公增添了一份温暖与活力。</p>
+                    </div>
+                </div>
+                <div class="application-item">
+                    <div class="application-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=person%20having%20breakfast%20with%20black%20ceramic%20mug%2C%20sunny%20kitchen%20setting%2C%20warm%20lighting&image_size=landscape_4_3" alt="早餐场景">
+                    </div>
+                    <div class="application-content">
+                        <h4>🌅 早餐时光</h4>
+                        <p>在早餐时使用温变杯，注入热饮后杯子的颜色变化为一天的开始增添了一份惊喜与温暖。温变杯的存在，让早餐时光更加愉悦，为一天的生活注入积极的能量。</p>
+                    </div>
+                </div>
+                <div class="application-item">
+                    <div class="application-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=person%20having%20afternoon%20tea%20with%20black%20ceramic%20mug%2C%20cozy%20cafe%20setting%2C%20warm%20lighting&image_size=landscape_4_3" alt="下午茶场景">
+                    </div>
+                    <div class="application-content">
+                        <h4>☕ 下午茶时光</h4>
+                        <p>在下午茶时光，温变杯成为最佳选择。注入热茶或咖啡后，杯子的颜色变化为下午茶增添了一份趣味性，让休闲时光更加愉悦。温变杯的存在，为下午茶时光增添了一份温暖与精致。</p>
+                    </div>
+                </div>
+                <div class="application-item">
+                    <div class="application-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=person%20writing%20in%20journal%20with%20black%20ceramic%20mug%20beside%2C%20cozy%20home%20setting%2C%20warm%20lighting&image_size=landscape_4_3" alt="写作场景">
+                    </div>
+                    <div class="application-content">
+                        <h4>✍️ 写作时光</h4>
+                        <p>在写作时，温变杯成为灵感的源泉。一边写作，一边感受杯子的温度变化，让思维更加活跃，灵感更加丰富。温变杯的存在，为写作时光增添了一份温暖与创意，让写作过程更加愉悦。</p>
+                    </div>
+                </div>
+                <div class="application-item">
+                    <div class="application-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=person%20watching%20movie%20with%20black%20ceramic%20mug%2C%20cozy%20home%20theater%20setting%2C%20dim%20lighting&image_size=landscape_4_3" alt="观影场景">
+                    </div>
+                    <div class="application-content">
+                        <h4>🎬 观影时光</h4>
+                        <p>在观影时，温变杯成为最佳伴侣。一边观看电影，一边感受杯子的温度变化，让观影体验更加丰富。温变杯的存在，为观影时光增添了一份温暖与舒适，让观影过程更加享受。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>用户反馈</h3>
+            <div class="highlight-box">
+                <p><strong>张同学（湖南城市学院学生）</strong>："自从使用了橙心向阳·温变杯，我每次注入热水都能看到杯子从黑色变成橙色，还有'听见心声'的文字，感觉特别有意义。在图书馆学习时，它成为我的贴心伙伴，每次喝水都能感受到温暖，让我更加关注自己的内心感受。"</p>
+                <p><strong>李女士（职场白领）</strong>："工作压力大的时候，我就会用这个杯子泡杯热茶，看着颜色变化的过程，心情也会跟着变得温暖起来，压力瞬间得到缓解。这个杯子不仅实用，更是我的心理调节工具。"</p>
+                <p><strong>王老师（心理咨询师）</strong>："我把这个杯子推荐给我的来访者，他们反馈说在等待咨询时，通过观察杯子的温度变化，心情会变得更加平静，更容易打开心扉。温变杯的设计理念与心理咨询的目标不谋而合，成为辅助治疗的有效工具。"</p>
+                <p><strong>陈同学（湖南城市学院学生）</strong>："作为学校的学生，我特别喜欢这个杯子融入了校园文化元素，使用时感受到强烈的归属感。每次看到杯子上的迷宫心形图案，都会想起学校的心理健康教育中心，提醒我关注自己的心理健康。"</p>
+                <p><strong>刘女士（教师）</strong>："我把橙心向阳·温变杯作为礼物送给了我的学生，他们都非常喜欢。这个杯子不仅实用，还能传递心理健康的理念，是一件非常有意义的礼物。"</p>
+                <p><strong>张先生（创业者）</strong>："在创业过程中，压力很大，橙心向阳·温变杯成为我减压的神器。每次看到杯子的颜色变化，心情都会变得更加平静，让我能够更好地应对创业中的挑战。"</p>
+                <p><strong>赵同学（湖南城市学院学生）</strong>："橙心向阳·温变杯是我收到的最有意义的礼物。每次使用它，都能感受到温暖与关怀，让我更加关注自己的心理健康，成为更好的自己。"</p>
+                <p><strong>孙女士（设计师）</strong>："作为一名设计师，我非常欣赏橙心向阳·温变杯的创意设计。它不仅外观美观，还具有深层的情感内涵，是一件真正的文创艺术品。"</p>
+            </div>
+        </section>
+        
+        <!-- 销售策略与价格方案 -->
+        <section class="section">
+            <h2>📈 销售策略与价格方案</h2>
+            
+            <h3>价格策略</h3>
+            <div class="highlight-box">
+                <p>我们采用差异化定价策略，根据不同的销售渠道和目标客户群体，制定合理的价格方案：</p>
+                <ul>
+                    <li><strong>零售价格</strong>：138元/个</li>
+                    <li><strong>批量采购</strong>：100个以上，108元/个</li>
+                    <li><strong>校园推广价</strong>：学生凭学生证，118元/个</li>
+                    <li><strong>心理健康机构合作价</strong>：98元/个</li>
+                    <li><strong>教职工优惠价</strong>：凭工作证，108元/个</li>
+                </ul>
+            </div>
+            
+            <h3>销售渠道</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h4>🌐 线上渠道</h4>
+                    <p>通过官方网站、电商平台（淘宝、京东）、社交媒体（微信小程序、抖音）等线上渠道进行销售，覆盖全国用户。利用社交媒体平台进行推广，通过短视频展示温变杯的温度变化效果，吸引潜在客户。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🏪 线下渠道</h4>
+                    <p>在高校书店、文创店、咖啡店、心理健康机构等线下场所设立销售点，让用户可以亲身体验产品的温变效果。与校园周边的商铺合作，扩大产品的曝光度和销售范围。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🤝 合作推广</h4>
+                    <p>与高校心理健康中心、企业人力资源部门、心理咨询机构等建立合作关系，作为福利或辅助工具进行推广。为心理健康机构提供定制服务，将产品作为心理治疗的辅助工具。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🏆 赛事营销</h4>
+                    <p>通过参加各类文创设计大赛、创业大赛等活动，提高产品知名度，吸引潜在客户和投资者。利用赛事平台展示产品的设计理念和创新点，提升品牌形象。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🎓 校园推广</h4>
+                    <p>在校园内开展推广活动，如心理健康主题讲座、文创产品展览等，提高产品在学生中的知名度和认可度。与学生社团合作，组织相关活动，扩大产品的影响力。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>📱 社交媒体营销</h4>
+                    <p>利用微信、微博、抖音等社交媒体平台，发布产品的使用场景、用户反馈等内容，增强产品的互动性和传播力。开展线上活动，如话题挑战、用户分享等，提高产品的关注度。</p>
+                </div>
+            </div>
+            
+            <h3>促销活动</h3>
+            <div class="highlight-box">
+                <p>为了快速打开市场，我们计划开展以下促销活动：</p>
+                <ul>
+                    <li><strong>首发优惠</strong>：上市前两周，享受8折优惠</li>
+                    <li><strong>组合套装</strong>：购买两个以上，享受7.5折优惠</li>
+                    <li><strong>节日促销</strong>：在教师节、圣诞节、心理健康日等节日推出特别包装和优惠</li>
+                    <li><strong>会员积分</strong>：建立会员制度，积分可兑换周边产品或折扣</li>
+                    <li><strong>校园专属</strong>：针对湖南城市学院学生，推出校园专属包装，凭学生证享受额外优惠</li>
+                    <li><strong>心理健康月活动</strong>：在心理健康月期间，推出限时优惠，鼓励更多人关注心理健康</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- 投资回报与未来规划 -->
+        <section class="section">
+            <h2>🚀 投资回报与未来规划</h2>
+            
+            <h3>投资回报分析</h3>
+            <div class="highlight-box">
+                <p><strong>成本分析</strong>：单个杯子的生产成本约为50元，包括原材料、温变油墨工艺、包装等。</p>
+                <p><strong>利润空间</strong>：零售价格138元，毛利率约为64%，具有良好的盈利空间。</p>
+                <p><strong>销售目标</strong>：第一年预计销售12,000个，实现销售收入165.6万元，净利润约50万元。</p>
+                <p><strong>投资回收</strong>：初期投资约25万元，预计5个月内收回成本，15个月内实现盈利。</p>
+                <p><strong>风险评估</strong>：通过市场调研和产品测试，风险可控，投资回报率高。</p>
+            </div>
+            
+            <h3>未来发展规划</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h4>📱 产品系列扩展</h4>
+                    <p>基于核心的温变技术，开发系列产品，包括不同尺寸的杯子、马克杯、保温杯等，满足不同用户的需求。同时，开发配套的周边产品，如杯垫、杯套等，形成完整的产品体系。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🎨 定制服务</h4>
+                    <p>提供企业定制、个人定制服务，根据客户需求在杯子上添加个性化元素，如企业LOGO、个人姓名等。针对高校、企业、心理健康机构等不同客户群体，提供专属定制方案。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🌍 国际市场</h4>
+                    <p>在国内市场稳定后，拓展国际市场，将中国文化元素与现代设计相结合，打造具有国际影响力的文创品牌。通过参加国际文创展会、与海外经销商合作等方式，逐步打开国际市场。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🔬 技术创新</h4>
+                    <p>持续研发新的温变技术，探索更多颜色变化和图案设计的可能性，保持产品的创新性和竞争力。同时，研究环保材料和可持续发展技术，为产品注入更多科技含量。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🤝 公益合作</h4>
+                    <p>与心理健康机构、公益组织合作，开展心理健康公益活动，将产品作为公益活动的载体，传递温暖与关怀。通过公益活动，提升品牌形象，增强社会影响力。</p>
+                </div>
+                <div class="feature-item">
+                    <h4>📚 教育合作</h4>
+                    <p>与高校、教育机构合作，将产品作为心理健康教育的辅助工具，融入心理健康课程和活动中。通过教育合作，扩大产品的应用场景，提高产品的社会价值。</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 技术规格与生产要求 -->
+        <section class="tech-section">
+            <h2>🔧 技术规格与生产要求</h2>
+            
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4>📐 杯身规格</h4>
+                    <p>
+                        材质：优质陶瓷<br>
+                        容量：11oz（约330ml）<br>
+                        尺寸：口径8.2cm × 高9.5cm<br>
+                        重量：约320g
+                    </p>
+                </div>
+                <div class="tech-item">
+                    <h4>🎨 温变工艺</h4>
+                    <p>
+                        工艺类型：温变油墨技术<br>
+                        变色温度：45°C<br>
+                        变色效果：深灰色 → 暖橙色<br>
+                        使用寿命：≥500次温度变化
+                    </p>
+                </div>
+                <div class="tech-item">
+                    <h4>🔬 材质特性</h4>
+                    <p>
+                        白度：≥85%<br>
+                        吸水率：≤0.5%<br>
+                        热稳定性：-20°C至120°C<br>
+                        安全性：符合GB 4806.4-2016标准
+                    </p>
+                </div>
+                <div class="tech-item">
+                    <h4>💰 成本预估</h4>
+                    <p>
+                        单杯成本：25-30元<br>
+                        起订量：100个<br>
+                        生产周期：15-20天<br>
+                        供应商：景德镇陶瓷厂家
+                    </p>
+                </div>
+                <div class="tech-item">
+                    <h4>🏭 生产流程</h4>
+                    <p>
+                        1. 陶瓷成型：采用注浆成型工艺，确保杯身形状规整<br>
+                        2. 高温烧制：1280°C高温烧制，确保陶瓷质地坚硬<br>
+                        3. 釉面处理：哑光黑釉，光滑无气泡<br>
+                        4. 温变印刷：丝网印刷温变油墨，图案清晰<br>
+                        5. 质量检测：严格的质量检测，确保产品品质
+                    </p>
+                </div>
+                <div class="tech-item">
+                    <h4>📦 包装要求</h4>
+                    <p>
+                        内包装：泡沫缓冲，保护杯子不受损坏<br>
+                        外包装：精美礼盒，适合送礼<br>
+                        包装设计：融入心理健康主题元素，与产品风格一致
+                    </p>
+                </div>
+            </div>
+            
+            <div class="tech-specs">
+                <h4>📋 详细技术参数</h4>
+                <ul class="spec-list">
+                    <li><strong>材质：</strong>优质陶瓷，高温烧制</li>
+                    <li><strong>釉面：</strong>哑光黑釉，光滑无气泡</li>
+                    <li><strong>温变油墨：</strong>进口温变粉，环保无毒</li>
+                    <li><strong>印刷工艺：</strong>丝网印刷，图案清晰</li>
+                    <li><strong>包装：</strong>精美礼盒包装，适合送礼</li>
+                    <li><strong>保质期：</strong>长期使用，温变效果持久</li>
+                    <li><strong>使用温度：</strong>-20°C至120°C</li>
+                    <li><strong>清洗方式：</strong>手洗或洗碗机清洗</li>
+                    <li><strong>安全认证：</strong>符合GB 4806.4-2016标准</li>
+                    <li><strong>生产标准：</strong>ISO 9001质量管理体系认证</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- 结语 -->
+        <section class="section">
+            <h2>🌟 结语</h2>
+            <div class="highlight-box">
+                <p>橙心向阳·温变杯，不仅仅是一个实用的饮水容器，更是一件传递温暖与情感的文创艺术品。通过温度感应的视觉变化，它让使用者在日常生活中感受到温度与情感的交融，成为连接内心与外在世界的桥梁。</p>
+                <p>我们相信，这样一款融合了创意设计与情感表达的产品，必将在文创市场中脱颖而出，成为人们生活中不可或缺的温暖陪伴。它不仅是一件实用的日常用品，更是一件具有心理疗愈价值的艺术品，通过温度变化的视觉效果，传递出积极的心理信息，帮助使用者缓解压力，调整情绪，达到心理疗愈的效果。</p>
+                <p>橙心向阳·温变杯，以温度为媒介，以情感为核心，以创意为驱动，将心理健康理念融入日常生活，成为心理健康教育的重要载体。我们期待，通过这款产品，能够让更多人关注心理健康，感受到温暖与关怀，让每个人的内心都充满阳光。</p>
+                <p>在设计过程中，我们始终坚持"温暖关怀、创新体验、校园文化、心理健康、品质生活"的品牌价值观，努力创造出既具有实用性又具有情感价值的产品。我们相信，橙心向阳·温变杯不仅能够满足消费者的需求，也能够为心理健康教育事业做出贡献。</p>
+                <p>让我们一起，用温度传递情感，用创意点亮生活，用关怀温暖心灵。橙心向阳·温变杯，与你一起，开启温度与情感的治愈之旅。我们相信，在未来的日子里，橙心向阳·温变杯将成为校园文化的重要组成部分，为更多人带来温暖与关怀。</p>
+            </div>
+        </section>
+        
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p>🌅 橙心向阳·温变杯</p>
+            <p>心之轨迹 | 温度与情感的治愈之旅</p>
+            <p>✨ 2026年"橙心向阳"心理主题文创设计大赛参赛作品</p>
+            <p>🤝 参赛团队：心暖创意工作室</p>
+            <p class="copyright">© 2026 心暖创意工作室 版权所有</p>
+        </footer>
+    </div>
+</body>
+</html>
