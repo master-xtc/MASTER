@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>心小橙IP形象 · 2026年"橙心向阳"心理主题文创设计大赛</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #C9A962;
+            --primary-dark: #8B7355;
+            --primary-light: #E8DCC8;
+            --accent: #7B6B80;
+            --accent-deep: #4A3F4F;
+            --sage: #2D4A3E;
+            --sage-light: #4A7A66;
+            --bg-cream: #FAF8F5;
+            --bg-warm: #F5F0E8;
+            --bg-soft: #EDE6DB;
+            --text-primary: #2D2A26;
+            --text-secondary: #6B6560;
+            --text-muted: #9A9590;
+            --gold: #D4AF37;
+            --gold-light: #E8D4A0;
+            --border: rgba(201, 169, 98, 0.3);
+            --border-light: rgba(201, 169, 98, 0.15);
+            --shadow: rgba(45, 42, 38, 0.08);
+            --shadow-deep: rgba(45, 42, 38, 0.15);
+            --gradient-luxury: linear-gradient(135deg, #FAF8F5 0%, #F5F0E8 40%, #EDE6DB 100%);
+            --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #C9A962 50%, #E8D4A0 100%);
+            --gradient-accent: linear-gradient(135deg, #7B6B80 0%, #9B8AA0 50%, #B8A8B8 100%);
+        }
+        body {
+            font-family: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+            line-height: 2;
+            color: var(--text-primary);
+            background: var(--gradient-luxury);
+            min-height: 100vh;
+            padding: 0;
+            position: relative;
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(ellipse at 15% 15%, rgba(201, 169, 98, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 85% 85%, rgba(123, 107, 128, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 30%, rgba(45, 74, 62, 0.08) 0%, transparent 40%),
+                radial-gradient(ellipse at 70% 70%, rgba(232, 212, 160, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+            animation: floatGradient 30s ease-in-out infinite;
+        }
+        @keyframes floatGradient {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(1.5%, 1.5%) rotate(0.3deg); }
+            66% { transform: translate(-1.5%, -1%) rotate(-0.3deg); }
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23C9A962" fill-opacity="0.02"%3E%3Cpath d="M50 50c0-11.046-8.954-20-20-20V0h40v30c0 11.046-8.954 20-20 20zm0 40c0 11.046 8.954 20 20 20V100H30V90c0-11.046 8.954-20 20-20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+            pointer-events: none;
+            z-index: 1;
+        }
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+            z-index: 2;
+            padding-top: 60px;
+            padding-bottom: 120px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+            padding: 100px 60px;
+            background: linear-gradient(145deg, #ffffff 0%, #FDFCFA 50%, #F8F4EE 100%);
+            border-radius: 40px;
+            box-shadow: 0 20px 60px var(--shadow-deep), 0 8px 20px var(--shadow);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid var(--border-light);
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--sage) 0%, var(--primary) 25%, var(--gold) 50%, var(--primary) 75%, var(--accent) 100%);
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -30%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(ellipse, rgba(201, 169, 98, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulseGlow 5s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.15); opacity: 0.9; }
+        }
+        header:hover { transform: translateY(-8px); box-shadow: 0 30px 80px var(--shadow-deep), 0 12px 30px var(--shadow); }
+        .championship-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 36px;
+            background: var(--gradient-gold);
+            color: #3D3425;
+            border-radius: 50px;
+            font-size: 1em;
+            font-weight: 700;
+            margin-bottom: 32px;
+            letter-spacing: 4px;
+            box-shadow: 0 10px 30px rgba(201, 169, 98, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .championship-badge::before { content: '✦'; font-size: 1.2em; }
+        .championship-badge::after { content: '✦'; font-size: 1.2em; }
+        h1 {
+            font-size: 3.4em;
+            margin-bottom: 24px;
+            font-weight: 700;
+            letter-spacing: 10px;
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, var(--sage) 0%, var(--primary-dark) 25%, var(--primary) 50%, var(--primary-dark) 75%, var(--sage) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+        }
+        .subtitle {
+            font-size: 1.3em;
+            color: var(--text-secondary);
+            margin-bottom: 18px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            position: relative;
+            z-index: 1;
+            font-family: 'Noto Serif SC', serif;
+        }
+        .subtitle:last-of-type {
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: 1.4em;
+            padding: 18px 40px;
+            background: linear-gradient(135deg, rgba(201, 169, 98, 0.08) 0%, rgba(232, 212, 160, 0.12) 100%);
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 8px 24px rgba(201, 169, 98, 0.15);
+            border: 1px solid var(--border);
+            letter-spacing: 6px;
+        }
+        .section {
+            background: linear-gradient(145deg, #ffffff 0%, #FDFCFA 100%);
+            border-radius: 32px;
+            padding: 70px;
+            margin-bottom: 60px;
+            box-shadow: 0 12px 40px var(--shadow), 0 4px 12px var(--shadow);
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent 0%, var(--primary) 50%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .section:hover { transform: translateY(-6px); box-shadow: 0 24px 60px var(--shadow-deep), 0 8px 20px var(--shadow); }
+        .section:hover::before { opacity: 1; }
+        .hero-badge {
+            display: inline-block;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+            color: white;
+            border-radius: 30px;
+            font-size: 0.95em;
+            font-weight: 600;
+            margin-bottom: 26px;
+            letter-spacing: 2px;
+            box-shadow: 0 8px 24px rgba(45, 74, 62, 0.3);
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .section-badge {
+            display: inline-block;
+            padding: 10px 22px;
+            background: linear-gradient(135deg, rgba(201, 169, 98, 0.1) 0%, rgba(232, 212, 160, 0.15) 100%);
+            color: var(--primary-dark);
+            border-radius: 24px;
+            font-size: 0.88em;
+            font-weight: 600;
+            margin-bottom: 22px;
+            letter-spacing: 2px;
+            border: 1px solid var(--border);
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        h2 {
+            font-size: 2.4em;
+            margin-bottom: 50px;
+            padding-bottom: 22px;
+            border-bottom: 2px solid var(--border-light);
+            position: relative;
+            font-weight: 600;
+            letter-spacing: 6px;
+            font-family: 'Noto Sans SC', sans-serif;
+            color: var(--text-primary);
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 120px;
+            height: 4px;
+            background: var(--gradient-gold);
+            border-radius: 4px;
+        }
+        h3 { font-size: 1.6em; color: var(--sage); margin: 50px 0 26px; font-weight: 600; letter-spacing: 3px; font-family: 'Noto Sans SC', sans-serif; }
+        .hero-showcase { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; margin-bottom: 60px; }
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: 36px;
+            overflow: hidden;
+            box-shadow: 0 24px 60px var(--shadow-deep);
+            border: 1px solid var(--border);
+        }
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(45, 74, 62, 0.15) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+        .hero-image-wrapper::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(201, 169, 98, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+            transition: all 0.6s ease;
+        }
+        .hero-image-wrapper:hover::after { transform: scale(1.2); }
+        .hero-image-wrapper img { width: 100%; height: 480px; object-fit: cover; transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .hero-image-wrapper:hover img { transform: scale(1.05); }
+        .hero-floating-badge {
+            position: absolute;
+            top: 28px;
+            right: 28px;
+            background: var(--gradient-gold);
+            color: #3D3425;
+            padding: 14px 28px;
+            border-radius: 35px;
+            font-weight: 700;
+            font-size: 0.95em;
+            box-shadow: 0 8px 28px rgba(201, 169, 98, 0.5);
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            letter-spacing: 2px;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .hero-content { padding: 48px; background: linear-gradient(135deg, rgba(201, 169, 98, 0.06) 0%, rgba(232, 212, 160, 0.1) 100%); border-radius: 32px; border-left: 6px solid var(--primary); }
+        .hero-content h3 { font-size: 1.8em; color: var(--sage); margin-top: 0; margin-bottom: 28px; font-weight: 600; letter-spacing: 4px; }
+        .hero-content p { font-size: 1.15em; color: var(--text-secondary); line-height: 2.2; margin-bottom: 20px; }
+        .hero-content strong { color: var(--primary-dark); font-weight: 700; }
+        .stats-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px; margin-top: 55px; }
+        .stat-item {
+            text-align: center;
+            padding: 34px 20px;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(201, 169, 98, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .stat-item:hover { transform: translateY(-8px); box-shadow: 0 20px 50px var(--shadow-deep); border-color: var(--primary); }
+        .stat-item:hover::before { transform: scaleX(1); }
+        .stat-item:hover::after { opacity: 1; }
+        .stat-value { font-size: 2.6em; font-weight: 700; color: var(--primary-dark); margin-bottom: 14px; font-family: 'Noto Sans SC', sans-serif; }
+        .stat-label { font-size: 0.95em; color: var(--text-muted); letter-spacing: 2px; font-weight: 400; }
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(201, 169, 98, 0.1) 0%, rgba(232, 212, 160, 0.15) 50%, rgba(201, 169, 98, 0.1) 100%);
+            border-radius: 32px;
+            padding: 55px;
+            margin: 55px 0;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        .highlight-box::before {
+            content: '✦';
+            position: absolute;
+            top: -10px;
+            left: 42px;
+            font-size: 4em;
+            color: var(--primary);
+            opacity: 0.3;
+        }
+        .highlight-title { font-size: 1.5em; color: var(--sage); margin-bottom: 26px; font-weight: 600; letter-spacing: 4px; font-family: 'Noto Sans SC', sans-serif; }
+        .highlight-text { font-size: 1.18em; color: var(--text-secondary); line-height: 2.4; font-weight: 400; }
+        .highlight-text strong { color: var(--primary-dark); font-weight: 700; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 40px; margin: 55px 0; }
+        .gallery-card {
+            background: linear-gradient(145deg, #ffffff 0%, #FDFCFA 100%);
+            border-radius: 36px;
+            overflow: hidden;
+            box-shadow: 0 12px 36px var(--shadow);
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid var(--border-light);
+            position: relative;
+        }
+        .gallery-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+            transform-origin: left;
+        }
+        .gallery-card:hover { transform: translateY(-12px); box-shadow: 0 28px 70px var(--shadow-deep); border-color: var(--primary); }
+        .gallery-card:hover::before { transform: scaleX(1); }
+        .gallery-image { position: relative; overflow: hidden; }
+        .gallery-image img { width: 100%; height: 260px; object-fit: cover; transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .gallery-card:hover .gallery-image img { transform: scale(1.12); }
+        .gallery-info { padding: 32px; }
+        .gallery-title { font-size: 1.35em; color: var(--sage); margin-bottom: 16px; font-weight: 600; letter-spacing: 2px; text-align: center; font-family: 'Noto Sans SC', sans-serif; }
+        .gallery-desc { font-size: 1em; color: var(--text-muted); line-height: 2; text-align: center; }
+        .design-philosophy {
+            background: linear-gradient(135deg, rgba(201, 169, 98, 0.08) 0%, rgba(232, 212, 160, 0.12) 50%, rgba(123, 107, 128, 0.08) 100%);
+            border-radius: 36px;
+            padding: 65px;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .design-philosophy::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -25%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(201, 169, 98, 0.18) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .philosophy-icon { font-size: 3.8em; margin-bottom: 30px; }
+        .philosophy-title { font-size: 2em; color: var(--sage); margin-bottom: 32px; font-weight: 600; letter-spacing: 6px; position: relative; z-index: 1; font-family: 'Noto Sans SC', sans-serif; }
+        .philosophy-text { font-size: 1.18em; color: var(--text-secondary); line-height: 2.4; position: relative; z-index: 1; font-weight: 400; }
+        .philosophy-text strong { background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700; }
+        .core-values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin: 55px 0; }
+        .value-card {
+            background: linear-gradient(145deg, #ffffff 0%, #FDFCFA 100%);
+            border-radius: 32px;
+            padding: 45px 35px;
+            text-align: center;
+            box-shadow: 0 10px 32px var(--shadow);
+            transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid var(--border-light);
+        }
+        .value-card:hover { transform: translateY(-10px); box-shadow: 0 24px 56px var(--shadow-deep); border-color: var(--primary); }
+        .value-icon { font-size: 3.2em; margin-bottom: 26px; }
+        .value-title { font-size: 1.35em; color: var(--sage); margin-bottom: 18px; font-weight: 600; letter-spacing: 2px; font-family: 'Noto Sans SC', sans-serif; }
+        .value-desc { font-size: 1em; color: var(--text-muted); line-height: 2; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 36px; margin: 55px 0; }
+        .feature-card {
+            background: linear-gradient(145deg, #ffffff 0%, #FDFCFA 100%);
+            padding: 38px;
+            border-radius: 32px;
+            box-shadow: 0 10px 32px var(--shadow);
+            transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+        }
+        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 24px 56px var(--shadow-deep); border-color: var(--primary); }
+        .feature-card:hover::before { transform: scaleX(1); }
+        .feature-icon { font-size: 2.4em; margin-bottom: 22px; }
+        .feature-title { font-size: 1.35em; color: var(--sage); margin-bottom: 20px; font-weight: 600; letter-spacing: 2px; font-family: 'Noto Sans SC', sans-serif; }
+        .feature-desc { font-size: 1em; color: var(--text-muted); line-height: 2; }
+        .brand-identity-section { background: linear-gradient(135deg, rgba(201, 169, 98, 0.08) 0%, rgba(232, 212, 160, 0.12) 100%); border-radius: 36px; padding: 65px; margin: 60px 0; border: 1px solid var(--border); }
+        .identity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 45px; margin-top: 45px; }
+        .identity-card { background: white; border-radius: 32px; padding: 45px; box-shadow: 0 10px 32px var(--shadow); border: 1px solid var(--border-light); }
+        .identity-icon { font-size: 2.4em; margin-bottom: 24px; }
+        .identity-title { font-size: 1.35em; color: var(--sage); margin-bottom: 20px; font-weight: 600; letter-spacing: 2px; font-family: 'Noto Sans SC', sans-serif; }
+        .identity-desc { font-size: 1em; color: var(--text-muted); line-height: 2; }
+        .color-palette { display: flex; gap: 18px; margin-top: 24px; flex-wrap: wrap; }
+        .color-swatch {
+            width: 78px;
+            height: 78px;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 10px;
+            font-size: 0.68em;
+            color: white;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255,255,255,0.4);
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .vi-specs { background: linear-gradient(135deg, rgba(201, 169, 98, 0.06) 0%, rgba(232, 212, 160, 0.1) 100%); border-radius: 32px; padding: 50px; margin: 45px 0; border: 1px solid var(--border); }
+        .vi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 30px; }
+        .vi-card { background: white; border-radius: 26px; padding: 30px; text-align: center; border: 1px solid var(--border-light); transition: all 0.4s ease; }
+        .vi-card:hover { transform: translateY(-6px); border-color: var(--primary); box-shadow: 0 14px 40px var(--shadow-deep); }
+        .vi-icon { font-size: 2.2em; margin-bottom: 16px; }
+        .vi-title { font-size: 1.08em; color: var(--sage); margin-bottom: 12px; font-weight: 600; }
+        .vi-desc { font-size: 0.92em; color: var(--text-muted); line-height: 1.8; }
+        .quote-box { background: linear-gradient(135deg, rgba(201, 169, 98, 0.08) 0%, rgba(232, 212, 160, 0.12) 100%); border-radius: 32px; padding: 50px; margin: 50px 0; position: relative; border-left: 8px solid var(--primary); border: 1px solid var(--border); }
+        .quote-box::before { content: '"'; position: absolute; top: 5px; left: 26px; font-size: 6em; color: rgba(201, 169, 98, 0.2); font-family: serif; line-height: 1; }
+        .quote-text { font-size: 1.2em; color: var(--text-secondary); line-height: 2.4; position: relative; z-index: 1; font-weight: 400; font-style: italic; }
+        .quote-author { margin-top: 26px; font-size: 1.05em; color: var(--primary-dark); font-weight: 600; }
+        .promotional-channels { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 38px; margin: 55px 0; }
+        .channel-card {
+            background: linear-gradient(145deg, #ffffff 0%, #FDFCFA 100%);
+            border-radius: 36px;
+            overflow: hidden;
+            box-shadow: 0 12px 36px var(--shadow);
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid var(--border-light);
+        }
+        .channel-card:hover { transform: translateY(-10px); box-shadow: 0 28px 70px var(--shadow-deep); border-color: var(--primary); }
+        .channel-image { height: 250px; overflow: hidden; }
+        .channel-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .channel-card:hover .channel-image img { transform: scale(1.1); }
+        .channel-content { padding: 34px; }
+        .channel-title { font-size: 1.4em; color: var(--sage); margin-bottom: 16px; font-weight: 600; letter-spacing: 2px; font-family: 'Noto Sans SC', sans-serif; }
+        .channel-desc { font-size: 1em; color: var(--text-muted); line-height: 2; }
+        .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minwidth(320px, 1fr)); gap: 38px; margin: 55px 0; }
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(201, 169, 98, 0.06) 0%, rgba(232, 212, 160, 0.1) 100%);
+            padding: 36px;
+            border-radius: 32px;
+            border-left: 6px solid var(--primary);
+            transition: all 0.4s ease;
+            border: 1px solid var(--border-light);
+        }
+        .testimonial-card:hover { transform: translateX(10px); background: linear-gradient(135deg, rgba(201, 169, 98, 0.1) 0%, rgba(232, 212, 160, 0.14) 100%); border-color: var(--primary); }
+        .testimonial-text { font-size: 1.05em; color: var(--text-muted); line-height: 2; margin-bottom: 22px; font-style: italic; }
+        .testimonial-author { font-weight: 600; color: var(--primary-dark); font-size: 1.05em; }
+        .testimonial-role { color: var(--text-muted); font-size: 0.9em; margin-top: 4px; }
+        .media-assets { background: linear-gradient(135deg, rgba(201, 169, 98, 0.08) 0%, rgba(232, 212, 160, 0.12) 100%); border-radius: 36px; padding: 58px; margin: 60px 0; border: 1px solid var(--border); }
+        .media-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 38px; margin-top: 38px; }
+        .media-card { background: white; border-radius: 32px; overflow: hidden; box-shadow: 0 10px 30px var(--shadow); transition: all 0.45s ease; border: 1px solid var(--border-light); }
+        .media-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px var(--shadow-deep); border-color: var(--primary); }
+        .media-image { height: 200px; overflow: hidden; }
+        .media-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+        .media-card:hover .media-image img { transform: scale(1.1); }
+        .media-content { padding: 26px; }
+        .media-title { font-size: 1.15em; color: var(--sage); margin-bottom: 12px; font-weight: 600; }
+        .media-desc { font-size: 0.92em; color: var(--text-muted); line-height: 1.8; }
+        .activity-calendar { background: linear-gradient(135deg, rgba(201, 169, 98, 0.1) 0%, rgba(232, 212, 160, 0.15) 100%); border-radius: 36px; padding: 58px; margin: 60px 0; border: 1px solid var(--border); }
+        .calendar-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 38px; }
+        .calendar-card { background: white; border-radius: 28px; overflow: hidden; box-shadow: 0 8px 24px var(--shadow); transition: all 0.4s ease; border: 1px solid var(--border-light); }
+        .calendar-card:hover { transform: translateY(-6px); box-shadow: 0 16px 42px var(--shadow-deep); border-color: var(--primary); }
+        .calendar-image { height: 160px; overflow: hidden; }
+        .calendar-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+        .calendar-card:hover .calendar-image img { transform: scale(1.1); }
+        .calendar-content { padding: 18px; }
+        .calendar-title { font-size: 1.05em; color: var(--sage); margin-bottom: 10px; font-weight: 600; }
+        .calendar-desc { font-size: 0.88em; color: var(--text-muted); line-height: 1.75; }
+        .application-section { background: linear-gradient(135deg, rgba(201, 169, 98, 0.08) 0%, rgba(232, 212, 160, 0.12) 100%); border-radius: 36px; padding: 58px; margin: 60px 0; border: 1px solid var(--border); }
+        .application-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 38px; margin-top: 38px; }
+        .application-card { background: white; border-radius: 32px; overflow: hidden; box-shadow: 0 10px 30px var(--shadow); transition: all 0.45s ease; border: 1px solid var(--border-light); }
+        .application-card:hover { transform: translateY(-10px); box-shadow: 0 26px 60px var(--shadow-deep); border-color: var(--primary); }
+        .application-image { height: 200px; overflow: hidden; }
+        .application-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+        .application-card:hover .application-image img { transform: scale(1.12); }
+        .application-content { padding: 28px; }
+        .application-title { font-size: 1.2em; color: var(--sage); margin-bottom: 14px; font-weight: 600; padding-bottom: 14px; border-bottom: 2px dashed var(--border-light); }
+        .application-desc { font-size: 1em; color: var(--text-muted); line-height: 1.9; }
+        .pricing-section { background: linear-gradient(135deg, rgba(201, 169, 98, 0.1) 0%, rgba(232, 212, 160, 0.15) 100%); border-radius: 40px; padding: 68px; margin: 60px 0; border: 1px solid var(--border); position: relative; overflow: hidden; }
+        .pricing-section::before { content: ''; position: absolute; top: -35%; right: -25%; width: 420px; height: 420px; background: radial-gradient(circle, rgba(201, 169, 98, 0.2) 0%, transparent 70%); border-radius: 50%; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 38px; margin-top: 50px; position: relative; z-index: 1; }
+        .pricing-card { background: white; border-radius: 36px; padding: 48px 36px; text-align: center; box-shadow: 0 14px 40px var(--shadow); transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1); border: 1px solid var(--border-light); position: relative; overflow: hidden; }
+        .pricing-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: var(--gradient-gold); }
+        .pricing-card:hover { transform: translateY(-14px) scale(1.02); box-shadow: 0 28px 70px var(--shadow-deep); border-color: var(--primary); }
+        .pricing-card.featured { border-color: var(--primary); transform: scale(1.05); box-shadow: 0 18px 55px var(--shadow-deep); }
+        .pricing-card.featured::before { height: 8px; }
+        .pricing-card.featured:hover { transform: translateY(-14px) scale(1.05); }
+        .pricing-badge { position: absolute; top: 24px; right: -36px; background: var(--gradient-gold); color: #3D3425; padding: 12px 48px; font-size: 0.8em; font-weight: 700; transform: rotate(45deg); letter-spacing: 2px; box-shadow: 0 8px 20px rgba(201, 169, 98, 0.5); font-family: 'Noto Sans SC', sans-serif; }
+        .pricing-icon { font-size: 3.4em; margin-bottom: 26px; }
+        .pricing-name { font-size: 1.5em; color: var(--sage); margin-bottom: 12px; font-weight: 600; letter-spacing: 4px; font-family: 'Noto Sans SC', sans-serif; }
+        .pricing-desc { color: var(--text-muted); font-size: 1em; margin-bottom: 26px; }
+        .pricing-price { font-size: 2.2em; font-weight: 700; color: var(--primary-dark); margin-bottom: 34px; font-family: 'Noto Sans SC', sans-serif; }
+        .pricing-price span { font-size: 0.35em; font-weight: 500; color: var(--text-muted); }
+        .pricing-features { list-style: none; padding: 0; margin-bottom: 36px; text-align: left; }
+        .pricing-features li { padding: 16px 0; color: var(--text-muted); border-bottom: 1px dashed var(--border-light); display: flex; align-items: center; gap: 14px; font-size: 1em; }
+        .pricing-features li:last-child { border-bottom: none; }
+        .pricing-features li::before { content: '✦'; color: var(--primary); font-weight: 600; font-size: 1em; }
+        .pricing-btn { display: inline-block; padding: 18px 55px; background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%); color: white; border-radius: 40px; font-weight: 600; letter-spacing: 3px; text-decoration: none; transition: all 0.4s ease; box-shadow: 0 12px 30px rgba(45, 74, 62, 0.35); font-size: 1.05em; font-family: 'Noto Sans SC', sans-serif; }
+        .pricing-btn:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(45, 74, 62, 0.45); }
+        .purchase-guide { background: white; border-radius: 36px; padding: 58px; margin-top: 58px; box-shadow: 0 12px 36px var(--shadow); border: 1px solid var(--border-light); }
+        .purchase-guide h3 { text-align: center; margin-bottom: 48px; }
+        .purchase-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .purchase-step { text-align: center; padding: 36px 22px; background: linear-gradient(135deg, rgba(201, 169, 98, 0.04) 0%, rgba(232, 212, 160, 0.06) 100%); border-radius: 28px; border: 1px solid var(--border-light); transition: all 0.4s ease; }
+        .purchase-step:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 16px 42px var(--shadow-deep); }
+        .step-number { width: 56px; height: 56px; background: var(--gradient-gold); color: #3D3425; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.35em; font-weight: 700; margin: 0 auto 24px; font-family: 'Noto Sans SC', sans-serif; }
+        .step-title { font-size: 1.15em; color: var(--sage); margin-bottom: 14px; font-weight: 600; }
+        .step-desc { font-size: 0.92em; color: var(--text-muted); line-height: 1.8; }
+        .specs-container { background: linear-gradient(135deg, rgba(201, 169, 98, 0.06) 0%, rgba(232, 212, 160, 0.1) 100%); border-radius: 32px; padding: 50px; margin-top: 58px; border: 1px solid var(--border); }
+        .specs-title { font-size: 1.45em; color: var(--sage); margin-bottom: 30px; font-weight: 600; letter-spacing: 2px; font-family: 'Noto Sans SC', sans-serif; }
+        .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .spec-item { background: white; padding: 30px; border-radius: 26px; box-shadow: 0 8px 24px var(--shadow); border: 1px solid var(--border-light); transition: all 0.4s ease; }
+        .spec-item:hover { border-color: var(--primary); box-shadow: 0 14px 40px var(--shadow-deep); transform: translateY(-4px); }
+        .spec-label { font-weight: 600; color: var(--sage); margin-bottom: 12px; letter-spacing: 2px; font-size: 1em; padding-bottom: 12px; border-bottom: 1px dashed var(--border-light); font-family: 'Noto Sans SC', sans-serif; }
+        .spec-value { color: var(--text-muted); font-size: 1.05em; line-height: 1.85; }
+        .social-impact { background: linear-gradient(135deg, rgba(201, 169, 98, 0.1) 0%, rgba(232, 212, 160, 0.15) 100%); border-radius: 36px; padding: 58px; margin: 60px 0; border: 1px solid var(--border); }
+        .social-impact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 38px; margin-top: 38px; }
+        .impact-item { background: white; border-radius: 28px; padding: 38px; box-shadow: 0 8px 24px var(--shadow); border: 1px solid var(--border-light); }
+        .impact-icon { font-size: 2em; margin-bottom: 18px; }
+        .impact-title { font-size: 1.25em; color: var(--sage); margin-bottom: 14px; font-weight: 600; }
+        .impact-desc { font-size: 1em; color: var(--text-muted); line-height: 1.9; }
+        .competition-section { background: linear-gradient(135deg, rgba(201, 169, 98, 0.12) 0%, rgba(232, 212, 160, 0.15) 50%, rgba(123, 107, 128, 0.1) 100%); border-radius: 40px; padding: 68px; margin-bottom: 60px; border: 1px solid var(--border); position: relative; overflow: hidden; }
+        .competition-section::before { content: ''; position: absolute; top: -55%; right: -35%; width: 460px; height: 460px; background: radial-gradient(circle, rgba(201, 169, 98, 0.2) 0%, transparent 70%); border-radius: 50%; }
+        .competition-grid { display: grid; grid-template-columns: repeat(auto-fit, minwidth(280px, 1fr)); gap: 38px; margin: 50px 0; position: relative; z-index: 1; }
+        .competition-card { background: white; padding: 42px; border-radius: 32px; box-shadow: 0 12px 36px var(--shadow); transition: all 0.45s ease; position: relative; z-index: 1; border: 1px solid var(--border-light); }
+        .competition-card:hover { transform: translateY(-10px); box-shadow: 0 24px 56px var(--shadow-deep); border-color: var(--primary); }
+        .competition-icon { font-size: 2.4em; margin-bottom: 24px; }
+        .competition-title { font-size: 1.35em; color: var(--sage); margin-bottom: 18px; font-weight: 600; letter-spacing: 2px; font-family: 'Noto Sans SC', sans-serif; }
+        .competition-desc { font-size: 1em; color: var(--text-muted); line-height: 1.9; }
+        .judging-criteria { background: white; border-radius: 32px; padding: 50px; margin-top: 58px; box-shadow: 0 12px 36px var(--shadow); position: relative; z-index: 1; border: 1px solid var(--border-light); }
+        .criteria-title { font-size: 1.45em; color: var(--sage); margin-bottom: 34px; font-weight: 600; letter-spacing: 2px; text-align: center; font-family: 'Noto Sans SC', sans-serif; }
+        .criteria-list { list-style: none; padding: 0; }
+        .criteria-list li { padding: 26px 0; border-bottom: 1px solid var(--border-light); transition: all 0.35s ease; font-size: 1.05em; line-height: 1.9; color: var(--text-muted); }
+        .criteria-list li:hover { padding-left: 18px; color: var(--sage); background: rgba(201, 169, 98, 0.04); }
+        .criteria-list li:last-child { border-bottom: none; }
+        .criteria-list strong { color: var(--primary-dark); font-weight: 700; margin-right: 18px; font-size: 1.1em; }
+        .contact-section { background: linear-gradient(135deg, rgba(201, 169, 98, 0.08) 0%, rgba(232, 212, 160, 0.12) 100%); border-radius: 36px; padding: 58px; margin: 60px 0; border: 1px solid var(--border); }
+        .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 38px; margin-top: 38px; }
+        .contact-card { background: white; border-radius: 32px; padding: 45px; box-shadow: 0 10px 30px var(--shadow); text-align: center; border: 1px solid var(--border-light); }
+        .contact-card:hover { border-color: var(--primary); box-shadow: 0 14px 42px var(--shadow-deep); }
+        .contact-icon { font-size: 3.2em; margin-bottom: 26px; }
+        .contact-title { font-size: 1.35em; color: var(--sage); margin-bottom: 16px; font-weight: 600; }
+        .contact-info { font-size: 1.05em; color: var(--text-muted); line-height: 1.9; }
+        .contact-info strong { color: var(--primary-dark); font-weight: 700; }
+        .ip-story { background: linear-gradient(135deg, rgba(201, 169, 98, 0.08) 0%, rgba(232, 212, 160, 0.12) 100%); border-radius: 36px; padding: 62px; margin: 60px 0; border: 1px solid var(--border); position: relative; overflow: hidden; }
+        .ip-story::before { content: '"'; position: absolute; top: -18px; left: 48px; font-size: 12em; color: rgba(201, 169, 98, 0.12); font-family: serif; line-height: 1; }
+        .story-title { font-size: 1.8em; color: var(--sage); margin-bottom: 30px; font-weight: 600; letter-spacing: 4px; position: relative; z-index: 1; font-family: 'Noto Sans SC', sans-serif; }
+        .story-content { font-size: 1.15em; color: var(--text-secondary); line-height: 2.35; position: relative; z-index: 1; font-weight: 400; }
+        .story-content p { margin-bottom: 24px; }
+        .story-content strong { color: var(--primary-dark); font-weight: 700; }
+        .footer { text-align: center; margin-top: 80px; padding: 75px; background: linear-gradient(145deg, #ffffff 0%, #FDFCFA 100%); border-radius: 40px; box-shadow: 0 16px 50px var(--shadow-deep); transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1); border: 1px solid var(--border-light); position: relative; overflow: hidden; }
+        .footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, var(--sage) 0%, var(--primary) 30%, var(--gold) 50%, var(--primary) 70%, var(--accent) 100%); }
+        .footer:hover { transform: translateY(-6px); box-shadow: 0 26px 65px var(--shadow-deep); }
+        .footer-title { font-size: 1.45em; color: var(--sage); font-weight: 600; letter-spacing: 5px; margin-bottom: 18px; font-family: 'Noto Sans SC', sans-serif; }
+        .footer-subtitle { font-size: 1.1em; color: var(--text-secondary); margin-bottom: 16px; }
+        .footer-info { font-size: 1em; color: var(--text-muted); margin-bottom: 10px; }
+        .footer-copyright { margin-top: 38px; padding-top: 34px; border-top: 1px solid var(--border-light); color: var(--primary-dark); font-size: 0.92em; }
+        @media (max-width: 1200px) {
+            .hero-showcase { grid-template-columns: 1fr; gap: 42px; }
+            .hero-image-wrapper img { height: 380px; }
+            .stats-row { grid-template-columns: repeat(3, 1fr); }
+            .identity-grid { grid-template-columns: 1fr; }
+            .social-impact-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; gap: 30px; }
+            .media-grid { grid-template-columns: repeat(2, 1fr); }
+            .calendar-grid { grid-template-columns: repeat(2, 1fr); }
+            .application-grid { grid-template-columns: repeat(2, 1fr); }
+            .purchase-steps { grid-template-columns: repeat(2, 1fr); }
+            .vi-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.1em; letter-spacing: 6px; }
+            .subtitle { font-size: 1.1em; }
+            .subtitle:last-of-type { font-size: 1.2em; padding: 15px 28px; }
+            header { padding: 58px 28px; margin-bottom: 50px; }
+            .container { padding: 0 20px; padding-top: 40px; padding-bottom: 80px; }
+            .section { padding: 38px; margin-bottom: 42px; }
+            h2 { font-size: 1.75em; }
+            h3 { font-size: 1.4em; }
+            .championship-badge { font-size: 0.92em; padding: 14px 28px; }
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .stat-value { font-size: 2.1em; }
+            .gallery { grid-template-columns: 1fr; gap: 32px; }
+            .gallery-image img { height: 250px; }
+            .features-grid { grid-template-columns: 1fr; gap: 30px; }
+            .promotional-channels { grid-template-columns: 1fr; gap: 34px; }
+            .channel-image { height: 220px; }
+            .testimonials { grid-template-columns: 1fr; gap: 30px; }
+            .pricing-grid { grid-template-columns: 1fr; gap: 28px; }
+            .pricing-card.featured { transform: scale(1); }
+            .purchase-steps { grid-template-columns: 1fr; }
+            .competition-section { padding: 38px; }
+            .competition-grid { grid-template-columns: 1fr; }
+            .social-impact-grid { grid-template-columns: 1fr; }
+            .core-values { grid-template-columns: 1fr; }
+            .media-grid { grid-template-columns: 1fr; }
+            .calendar-grid { grid-template-columns: 1fr; }
+            .application-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer { padding: 48px 28px; }
+            .vi-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8em; letter-spacing: 4px; }
+            .subtitle { font-size: 1em; }
+            .subtitle:last-of-type { font-size: 1.08em; }
+            .section { padding: 24px; }
+            h2 { font-size: 1.5em; }
+            h3 { font-size: 1.25em; }
+            .stats-row { grid-template-columns: 1fr; }
+            .hero-image-wrapper img { height: 240px; }
+            .gallery-image img { height: 210px; }
+            .channel-image { height: 190px; }
+            .calendar-grid { grid-template-columns: 1fr; }
+            .media-image img { height: 170px; }
+            .application-image { height: 190px; }
+            .specs-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="championship-badge">冲击最高奖项 · 彰显专业实力</div>
+            <h1>心小橙IP形象宣传作品</h1>
+            <p class="subtitle">温暖治愈 · 橙心向阳 · 心灵护航</p>
+            <p class="subtitle">2026年"橙心向阳"心理主题文创设计大赛 · 宣传作品类</p>
+        </header>
+
+        <section class="section hero-section">
+            <span class="hero-badge">冲击第一名的核心优势</span>
+            <h2>心小橙 · 心理健康教育的治愈力量</h2>
+            <div class="hero-showcase">
+                <div class="hero-image-wrapper">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=elegant%20cute%20orange%20mascot%20character%20xin%20xiao%20cheng%20with%20round%20plump%20body%20big%20sparkling%20eyes%20two%20green%20leaves%20on%20top%20warm%20friendly%20smile%20holding%20megaphone%20spreading%20positive%20mental%20health%20messages%20luxury%20minimal%20style%20soft%20gradient%20background%20in%20gold%20and%20sage%20tones%20subtle%20light%20rays%20professional%20branding%20design%20high-end%20artistic&image_size=landscape_4_3" alt="心小橙IP形象">
+                    <div class="hero-floating-badge">参赛作品</div>
+                </div>
+                <div class="hero-content">
+                    <h3>用宣传作品传递心理健康力量</h3>
+                    <p><strong>心小橙</strong>IP形象不仅是一个可爱的吉祥物，更是心理健康教育的<strong>传播使者</strong>。通过多元化的宣传作品，将"橙心向阳"的温暖理念传递给每一位需要关爱的人。</p>
+                    <p>本参赛作品以<strong>宣传作品类</strong>为核心定位，通过<strong>海报设计、短视频创作、社交媒体宣传</strong>等方式，全方位传播心理健康知识，让温暖与关爱走进校园每一个角落。</p>
+                    <p>宣传作品形式多样、内容丰富、传播力强，让心小橙成为大学生心理健康教育的<strong>贴心伙伴</strong>，用创意与温度点亮校园生活。</p>
+                </div>
+            </div>
+            <div class="stats-row">
+                <div class="stat-item"><div class="stat-value">18+</div><div class="stat-label">宣传作品形式</div></div>
+                <div class="stat-item"><div class="stat-value">15000+</div><div class="stat-label">预计覆盖受众</div></div>
+                <div class="stat-item"><div class="stat-value">30+</div><div class="stat-label">宣传渠道</div></div>
+                <div class="stat-item"><div class="stat-value">365</div><div class="stat-label">持续陪伴</div></div>
+                <div class="stat-item"><div class="stat-value">∞</div><div class="stat-label">心灵疗愈</div></div>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-title">冲击第一名的核心竞争力</div>
+                <div class="highlight-text">本作品以<strong>心理健康教育</strong>为核心主题，通过<strong>拟人化橙子IP形象</strong>传递"橙心向阳"的温暖理念。作品紧扣<strong>"润心养性·启智益德"</strong>的育人理念，创意独特、主题鲜明、实用性强。完美契合大赛<strong>五大评审标准</strong>：主题性（25分）+ 创意性（25分）+ 实用性（20分）+ 完整性（15分）+ 校园文化特色（15分）= <strong>冲击最高奖项的信心保障</strong>。</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="section-badge">品牌故事</span>
+            <h2>心小橙的诞生 · 一个治愈人心的故事</h2>
+            <div class="ip-story">
+                <div class="story-title">从一颗橙子到心灵的守护者</div>
+                <div class="story-content">
+                    <p>在湖南城市学院的校园里，有一个温暖的秘密。每一个大学生都会经历迷茫、焦虑与孤独的时刻——<strong>学业压力、人际关系、对未来的不确定</strong>......这些看不见的情绪，困扰着无数年轻的心灵。</p>
+                    <p><strong>心小橙</strong>，这个圆润可爱的拟人化橙子形象，诞生于这样的背景之下。它的<strong>橙色象征着阳光与活力</strong>，头顶的<strong>两片绿叶代表着生命力与希望</strong>，大而明亮的眼睛透露出温柔与智慧，温暖的笑容则传递着无尽的关怀与陪伴。</p>
+                    <p>我们相信，<strong>每一个人都需要一份温暖的陪伴</strong>。心小橙不仅是一个IP形象，更是心理健康教育的创新载体。通过海报、视频、表情包、周边产品等<strong>多元化的宣传作品</strong>，让心理健康知识以更加亲切、温暖的方式走进每一位学生的生活。</p>
+                    <p>这，就是<strong>心小橙</strong>的使命——用创意传递温暖，用爱心守护心灵，让每一个需要温暖的心都能找到归宿。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="section-badge">宣传作品展示</span>
+            <h2>18+种宣传作品形式 · 多元呈现</h2>
+            <div class="gallery">
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=elegant%20mental%20health%20awareness%20poster%20with%20cute%20orange%20mascot%20xin%20xiao%20cheng%20luxury%20minimal%20design%20soft%20gold%20and%20sage%20gradient%20background%20hearts%20subtle%20shine%20modern%20typography%20professional%20award%20quality%20artwork&image_size=landscape_4_3" alt="主题海报"></div><div class="gallery-info"><div class="gallery-title">心理健康主题海报</div><div class="gallery-desc">以心小橙IP形象为核心视觉元素，设计系列心理健康主题海报。用温暖的橙色和可爱的形象，传递积极向上的心理育人理念。适用于校园宣传栏、电子屏展示等多种场景。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20holding%20smartphone%20social%20media%20content%20wechat%20weibo%20elegant%20minimal%20style%20soft%20gold%20tones%20digital%20illustration%20professional%20branding%20mental%20health%20promotion&image_size=landscape_4_3" alt="社交媒体内容"></div><div class="gallery-info"><div class="gallery-title">社交媒体宣传内容</div><div class="gallery-desc">为微信公众号、微博、抖音、小红书等平台量身打造系列宣传内容。心小橙作为"心灵主播"，用年轻人喜爱的方式传播心理健康知识，让温暖走进学生的手机屏幕。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20next%20to%20university%20building%20campus%20wayfinding%20luxury%20minimal%20design%20sage%20green%20and%20gold%20tones%20elegant%20signage%20style%20professional%20artwork&image_size=landscape_4_3" alt="校园导视系统"></div><div class="gallery-info"><div class="gallery-title">校园导视系统设计</div><div class="gallery-desc">将心小橙形象融入校园导视系统，在图书馆、食堂、宿舍等公共场所设置心理健康引导标识。让心小橙成为校园中无处不在的温暖符号。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20in%20front%20of%20laptop%20online%20counseling%20platform%20elegant%20minimal%20style%20soft%20gold%20sage%20gradient%20professional%20digital%20platform%20design&image_size=landscape_4_3" alt="线上宣传"></div><div class="gallery-info"><div class="gallery-title">线上心理咨询推广</div><div class="gallery-desc">设计线上心理咨询服务宣传材料，降低学生对寻求心理帮助的顾虑。心小橙作为"心灵使者"引导正确认识心理咨询，让温暖在线上延续。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20with%20graduation%20cap%20mental%20health%20event%20luxury%20minimal%20celebration%20background%20soft%20gold%20and%20white%20elegant%20atmosphere%20professional%20award%20winning%20design&image_size=landscape_4_3" alt="活动宣传"></div><div class="gallery-info"><div class="gallery-title">心理健康活动宣传</div><div class="gallery-desc">为心理健康教育中心各类活动设计宣传物料，包括活动海报、邀请函、背景板、签名墙等。让心小橙成为每场活动的亮点。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20pointing%20at%20chalkboard%20mental%20health%20tips%20classroom%20elegant%20minimal%20style%20warm%20sage%20gold%20tones%20professional%20educational%20design&image_size=landscape_4_3" alt="教育内容"></div><div class="gallery-info"><div class="gallery-title">心理健康教育内容</div><div class="gallery-desc">开发系列心理健康教育宣传内容，包括知识展板、宣传手册、电子读物等。让专业的心理健康知识以更加生动易懂的方式呈现。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20meditating%20with%20lotus%20mindfulness%20healing%20luxury%20minimal%20zen%20calm%20sage%20green%20soft%20gold%20atmosphere%20professional%20wellness%20design&image_size=landscape_4_3" alt="疗愈宣传"></div><div class="gallery-info"><div class="gallery-title">心理疗愈理念宣传</div><div class="gallery-desc">传播"拥抱治愈"理念，宣传心理疗愈的有效方法。心小橙作为心理疗愈的"形象大使"，用温暖的方式传递疗愈的力量。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20with%20diverse%20college%20students%20holding%20hands%20campus%20community%20luxury%20minimal%20warm%20hearts%20togetherness%20sage%20gold%20elegant%20atmosphere&image_size=landscape_4_3" alt="校园文化"></div><div class="gallery-info"><div class="gallery-title">校园心理健康文化建设</div><div class="gallery-desc">打造具有学校特色的心理健康文化品牌，让心小橙成为心理健康教育中心的文化符号，融入校园生活的方方面面。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20with%20giant%20megaphone%20awareness%20campaign%20elegant%20minimal%20style%20positive%20energy%20soft%20gold%20sunshine%20professional%20propaganda%20design&image_size=landscape_4_3" alt="意识宣传"></div><div class="gallery-info"><div class="gallery-title">心理健康意识普及</div><div class="gallery-desc">通过心小橙形象普及心理健康知识，提升学生心理保健意识。让"关注心理健康"成为校园新风尚，让心小橙走进每个人的心里。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20giving%20warm%20hug%20emotional%20support%20compassion%20luxury%20minimal%20healing%20warmth%20soft%20gold%20sage%20atmosphere%20professional%20care%20design&image_size=landscape_4_3" alt="正能量传播"></div><div class="gallery-info"><div class="gallery-title">正能量传播载体</div><div class="gallery-desc">心小橙成为传递正能量的文化载体，在校园中传播积极乐观的生活态度。让校园充满温暖与希望，让每一个心灵都能找到慰藉。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20from%20smartphone%20screen%20digital%20platform%20avatar%20luxury%20minimal%20elegant%20soft%20gold%20glow%20professional%20marketing%20design&image_size=landscape_4_3" alt="数字平台"></div><div class="gallery-info"><div class="gallery-title">数字平台宣传推广</div><div class="gallery-desc">为心理健康教育线上平台设计宣传素材，包括开屏画面、首页banner、推送封面、加载动画等数字触点，让温暖在指尖传递。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20with%20giant%20heart%20chest%20care%20empathy%20humanistic%20luxury%20minimal%20warm%20compassionate%20sage%20gold%20healing%20professional%20design&image_size=landscape_4_3" alt="人文关怀"></div><div class="gallery-info"><div class="gallery-title">人文关怀理念传播</div><div class="gallery-desc">以心小橙为媒介，传播人文关怀理念，营造互帮互助的校园文化氛围。让每一个需要帮助的心都能感受到温暖与关爱。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20emotion%20sticker%20pack%20various%20expressions%20social%20media%20stickers%20luxury%20minimal%20colorful%20digital%20artwork%20professional%20design&image_size=landscape_4_3" alt="表情包系列"></div><div class="gallery-info"><div class="gallery-title">心小橙表情包系列</div><div class="gallery-desc">原创设计心小橙系列表情包，涵盖日常问候、情感表达、鼓励安慰等50+款表情。让心小橙成为学生日常交流中的温暖陪伴。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20on%20bookmark%20notebook%20postcard%20merchandise%20luxury%20minimal%20stationery%20products%20warm%20elegant%20office%20supplies%20professional%20design&image_size=landscape_4_3" alt="周边文创"></div><div class="gallery-info"><div class="gallery-title">心小橙周边文创产品</div><div class="gallery-desc">设计书签、明信片、笔记本、帆布包等周边文创产品。让心小橙走进学生的日常生活，随时随地传递温暖与关爱。</div></div></div>
+                <div class="gallery-card"><div class="gallery-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20video%20intro%20animation%20sparkles%20brand%20logo%20youtube%20intro%20luxury%20minimal%20motion%20graphics%20professional%20video%20production%20branding&image_size=landscape_4_3" alt="视频模板"></div><div class="gallery-info"><div class="gallery-title">短视频模板素材包</div><div class="gallery-desc">提供心小橙主题的视频开场、结尾、转场、片尾字幕等模板。方便心理健康教育中心快速制作专业短视频内容。</div></div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="section-badge">设计理念</span>
+            <h2>核心理念 · 精神内核 · 差异化优势</h2>
+            <div class="design-philosophy">
+                <div class="philosophy-icon"></div>
+                <div class="philosophy-title">橙心向阳 · 温暖相伴</div>
+                <div class="philosophy-text"><strong>心小橙IP形象宣传作品</strong>以心理健康教育为核心主题，通过多元化的宣传形式，为用户传递积极向上的心理能量。整体形象采用<strong>拟人化橙子设计</strong>，橙色象征阳光与活力，头顶的绿叶代表生命力，完美诠释<strong>"润心养性·启智益德"</strong>的心理育人理念。圆润的形象传递安全感与亲和力，"橙心向阳"寓意积极乐观的生活态度。通过<strong>海报、视频、新媒体内容</strong>等宣传作品，帮助用户<strong>缓解压力、舒缓情绪</strong>，获得心灵的慰藉与治愈。</div>
+            </div>
+            <h3>三大核心价值观</h3>
+            <div class="core-values">
+                <div class="value-card"><div class="value-icon"></div><div class="value-title">温暖治愈</div><div class="value-desc">用温暖的宣传语言，为每一位需要关怀的人带去心灵的慰藉与治愈的力量。让爱与温暖在传播中不断传递，让心小橙成为校园里最温暖的存在。我们相信，每一次真诚的关怀都能成为他人生命中的一束光。</div></div>
+                <div class="value-card"><div class="value-icon"></div><div class="value-title">积极向上</div><div class="value-desc">通过"橙心向阳"的主题，传递积极乐观的生活态度。鼓励人们勇敢面对生活的挑战，心向阳光，让正能量成为校园生活的主旋律。我们相信，态度决定命运，心态改变人生。</div></div>
+                <div class="value-card"><div class="value-icon"></div><div class="value-title">陪伴守护</div><div class="value-desc">成为每个人身边的温暖伙伴，用无声的陪伴守护每一颗需要温暖的心。让孤独与焦虑不再困扰，让心小橙成为学生最可靠的心灵港湾。我们相信，最好的治愈往往来自无声的陪伴。</div></div>
+            </div>
+            <h3>冲击第一名的八大差异化优势</h3>
+            <div class="features-grid">
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">治愈系设计</div><div class="feature-desc">温暖治愈的设计理念，圆润可爱的IP形象传递安全感与亲和力。每一次传播，都能传递心灵的慰藉与放松，让受众感受到无微不至的关怀。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">多元呈现</div><div class="feature-desc">海报、视频、社交媒体、表情包、周边产品等18+种宣传形式，满足不同场景的传播需求。多元化的内容矩阵，让心小橙无处不在。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">新媒体适配</div><div class="feature-desc">专为微信公众号、微博、抖音、小红书等平台优化宣传内容。年轻人喜欢什么形式，心小橙就以什么形式出现，让传播效果最大化。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">校园融入</div><div class="feature-desc">深度契合校园文化建设的需求，心小橙成为心理健康教育中心的文化符号。让IP与学校精神完美融合，打造独特的校园文化品牌。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">品牌统一</div><div class="feature-desc">统一的视觉识别系统，确保所有宣传作品风格一致。强化心小橙品牌形象，让每一个触点都传递同样的温暖与专业。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">传播力强</div><div class="feature-desc">基于年轻群体审美设计，内容贴近学生生活。易分享、易传播、易接受，让心理健康知识走进千家万户。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">情感共鸣</div><div class="feature-desc">通过真实的学生故事和场景引发情感共鸣。让目标受众感受到"这就是我需要的"，建立深层次的情感连接。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">可持续运营</div><div class="feature-desc">完整的品牌体系和内容生产流程，支持长期持续运营。让心小橙成为心理健康教育中心的长期品牌资产。</div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="section-badge">品牌识别</span>
+            <h2>品牌识别系统 · VI设计 · 标准化规范</h2>
+            <div class="brand-identity-section">
+                <div class="identity-grid">
+                    <div class="identity-card"><div class="identity-icon"></div><div class="identity-title">品牌色彩系统</div><div class="identity-desc">以温暖的橙色为主色调，象征阳光与活力，传递积极向上的正能量。搭配绿色作为点缀，象征生命与希望。科学配比的色彩系统确保所有应用场景的一致性。色彩比例为主色70%、辅助色20%、点缀色10%。</div><div class="color-palette"><div class="color-swatch" style="background: #8B7355;">雾灰棕</div><div class="color-swatch" style="background: #C9A962;">哑光金</div><div class="color-swatch" style="background: #D4AF37;">皇室金</div><div class="color-swatch" style="background: #7B6B80;">烟熏紫</div><div class="color-swatch" style="background: #2D4A3E;">墨玉绿</div><div class="color-swatch" style="background: #FAF8F5;">羊脂白</div></div></div>
+                    <div class="identity-card"><div class="identity-icon"></div><div class="identity-title">品牌标语体系</div><div class="identity-desc"><p style="margin-bottom: 14px;"><strong>主标语：</strong>"橙心向阳，温暖相伴"</p><p style="margin-bottom: 14px;"><strong>副标语：</strong>"每一次传播，都是心灵的治愈"</p><p style="margin-bottom: 14px;"><strong>品牌口号：</strong>"用心传递温暖，用爱守护心灵"</p><p><strong>延伸口号：</strong>"心小橙，守护每一颗年轻的心"</p></div></div>
+                    <div class="identity-card"><div class="identity-icon"></div><div class="identity-title">IP形象特征</div><div class="identity-desc"><p style="margin-bottom: 12px;"><strong>造型特征：</strong>圆润可爱的橙子形象，头顶两片翠绿叶子，大而明亮的眼睛透露出温柔与智慧，温暖的笑容则传递着无尽的关怀与陪伴。</p><p style="margin-bottom: 12px;"><strong>性格设定：</strong>温暖治愈、乐观积极、陪伴守护、善解人意、幽默风趣、正能量满满</p><p><strong>象征意义：</strong>橙色代表阳光活力，绿叶代表生命希望，整体传递温暖与治愈的力量</p></div></div>
+                    <div class="identity-card"><div class="identity-icon"></div><div class="identity-title">应用规范</div><div class="identity-desc"><p style="margin-bottom: 12px;"><strong>Logo使用：</strong>保持品牌标识的完整性和比例，不得随意拉伸或变形，最小使用尺寸为50px</p><p style="margin-bottom: 12px;"><strong>色彩规范：</strong>主色调统一使用品牌橙色系，辅以绿色点缀，确保视觉统一性</p><p><strong>字体规范：</strong>使用圆润柔和的字体，体现温暖亲和的品牌调性，推荐使用思源圆体</p></div></div>
+                </div>
+            </div>
+            <div class="vi-specs">
+                <div class="vi-title" style="font-size: 1.35em; color: var(--sage); margin-bottom: 26px; font-weight: 600; font-family: 'Noto Sans SC', sans-serif;">VI应用规范细则</div>
+                <div class="vi-grid">
+                    <div class="vi-card"><div class="vi-icon"></div><div class="vi-title">基础VI应用</div><div class="vi-desc">Logo标准制图、标准色彩定义、标准字体规范、辅助图形设计、禁用组合说明</div></div>
+                    <div class="vi-card"><div class="vi-icon"></div><div class="vi-title">新媒体应用</div><div class="vi-desc">公众号头像、微博封面、短视频头像、小红书配图、抖音主页、朋友圈封面</div></div>
+                    <div class="vi-card"><div class="vi-icon"></div><div class="vi-title">印刷物料应用</div><div class="vi-desc">海报设计、名片设计、宣传单页、周边产品、活动背景、易拉宝</div></div>
+                    <div class="vi-card"><div class="vi-icon"></div><div class="vi-title">数字平台应用</div><div class="vi-desc">官网Banner、开屏广告、弹窗设计、加载动画、图标设计、UI界面</div></div>
+                    <div class="vi-card"><div class="vi-icon"></div><div class="vi-title">视频应用</div><div class="vi-desc">片头模板、片尾模板、转场动画、角标设计、字幕条设计、背景板</div></div>
+                    <div class="vi-card"><div class="vi-icon"></div><div class="vi-title">周边产品应用</div><div class="vi-desc">文具系列、服装系列、生活用品、数字藏品、纪念礼品、联名合作</div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="section-badge">品牌价值观</span>
+            <h2>品牌价值主张 · 精神内核</h2>
+            <div class="quote-box"><div class="quote-text">在这个快节奏的时代，我们相信每一个人都需要一份温暖的陪伴。心小橙IP形象不仅是一个可爱的吉祥物，更是心灵的治愈师，用多元的宣传作品传递无声的关怀，让每一个需要温暖的心都能找到归宿。</div><div class="quote-author">心小橙品牌理念</div></div>
+            <h3>品牌八大核心价值</h3>
+            <div class="features-grid">
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">心灵治愈</div><div class="feature-desc">通过宣传作品传递心理疗愈理念，帮助用户缓解压力、舒缓情绪。每一次传播，都是一次心灵的对话，让温暖在无形中传递。专业研究表明，温暖的视觉形象可以有效降低焦虑水平。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">正能量传递</div><div class="feature-desc">以"橙心向阳"为品牌精神内核，传递积极乐观的生活态度。让每一位受众都能感受到阳光般的温暖，让正能量成为生活的主旋律。我们相信，积极的心态是最好的良药。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">温暖陪伴</div><div class="feature-desc">成为用户身边最可靠的温暖伙伴，用多元形式传递无声的陪伴。让正能量在生活中传递，让心小橙成为每个人最贴心的心灵港湾。365天全年无休的温暖守候。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">校园文化建设</div><div class="feature-desc">深度契合湖南城市学院心理健康教育中心的育人理念，打造"橙心向阳"文化品牌。让心小橙成为校园文化的重要组成部分，成为学校精神的象征符号。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">心理健康教育</div><div class="feature-desc">将心理健康教育理念融入多元宣传，通过作品传递正确的心理健康知识。让专业知识以更加亲切的方式走进学生生活，让学习变成一种享受。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">美好生活</div><div class="feature-desc">倡导积极健康的生活方式，让生活充满阳光，让心灵得到慰藉。让每一个学生都能拥有积极向上的生活态度，发现生活中的美好与温暖。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">人际连接</div><div class="feature-desc">促进学生之间的情感连接，营造互帮互助的校园氛围。心小橙成为同学之间传递温暖的媒介，让关怀在人际网络中流动。</div></div>
+                <div class="feature-card"><div class="feature-icon"></div><div class="feature-title">成长陪伴</div><div class="feature-desc">从入学到毕业，陪伴学生的每一个成长阶段。在不同的时期提供适时的心理支持，成为学生成长道路上最温暖的同行者。</div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="section-badge">宣传渠道</span>
+            <h2>30+宣传渠道 · 全方位覆盖</h2>
+            <div class="promotional-channels">
+                <div class="channel-card"><div class="channel-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20holding%20phone%20wechat%20logo%20social%20media%20luxury%20minimal%20elegant%20gold%20sage%20tones%20professional%20digital%20marketing%20design&image_size=landscape_4_3" alt="微信公众号"></div><div class="channel-content"><div class="channel-title">微信公众号</div><div class="channel-desc">利用微信公众号平台，发布系列心理健康知识推文，设计每日心语、每周心理小贴士等栏目。心小橙作为"心灵主播"，用温暖的声音陪伴每一位读者。计划每周更新3-5篇原创内容。</div></div></div>
+                <div class="channel-card"><div class="channel-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20filming%20short%20video%20tiktok%20douyin%20content%20luxury%20minimal%20elegant%20gold%20sage%20tones%20professional%20video%20production%20design&image_size=landscape_4_3" alt="抖音短视频"></div><div class="channel-content"><div class="channel-title">抖音/短视频平台</div><div class="channel-desc">创作系列短视频内容，以心小橙为主角演绎心理健康小剧场。用年轻人喜爱的方式传播心理健康知识，让内容病毒式传播。计划每月发布8-12条短视频。</div></div></div>
+                <div class="channel-card"><div class="channel-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20lifestyle%20content%20xiaohongshu%20social%20media%20influencer%20luxury%20minimal%20elegant%20warm%20gold%20tones%20professional%20design&image_size=landscape_4_3" alt="小红书"></div><div class="channel-content"><div class="channel-title">小红书</div><div class="channel-desc">针对小红书平台特性，设计精美的图文内容。心小橙的"治愈日记"、"心理小知识"等栏目，以高颜值、高分享性吸引年轻用户。计划每周发布3-5篇优质笔记。</div></div></div>
+                <div class="channel-card"><div class="channel-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20large%20event%20banner%20university%20campus%20offline%20promotion%20luxury%20minimal%20elegant%20sage%20gold%20tones%20professional%20design&image_size=landscape_4_3" alt="线下宣传"></div><div class="channel-content"><div class="channel-title">线下宣传</div><div class="channel-desc">在图书馆、食堂、宿舍楼等公共场所投放宣传海报和易拉宝。设计心小橙主题展板和互动拍照区，让线下宣传与线上传播形成闭环。预计覆盖校园20+个关键点位。</div></div></div>
+                <div class="channel-card"><div class="channel-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20website%20mascot%20counseling%20center%20online%20platform%20luxury%20minimal%20elegant%20gold%20sage%20professional%20web%20design&image_size=landscape_4_3" alt="官方网站"></div><div class="channel-content"><div class="channel-title">官方网站/平台</div><div class="channel-desc">为心理健康教育中心官网设计专属页面，融入心小橙IP元素。心小橙作为网站"向导"，引导学生获取所需的心理健康服务。提供24小时在线服务入口。</div></div></div>
+                <div class="channel-card"><div class="channel-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20email%20newsletter%20campaign%20laptop%20digital%20communication%20luxury%20minimal%20elegant%20professional%20design&image_size=landscape_4_3" alt="邮件推送"></div><div class="channel-content"><div class="channel-title">邮件/短信推送</div><div class="channel-desc">针对特定人群进行精准推送，包括新生入学指南、考前心理调适、毕业季关怀等个性化内容。实现精准触达，温暖每一个人。覆盖全校20000+师生。</div></div></div>
+            </div>
+            <h3>真实用户反馈 · 传播效果见证</h3>
+            <div class="testimonials">
+                <div class="testimonial-card"><div class="testimonial-text">"自从关注了心理健康教育中心的公众号，每天都能收到心小橙的'心灵鸡汤'，感觉特别温暖。学习压力大的时候，看看心小橙的表情包，心情都会好很多。"</div><div class="testimonial-author">王同学 · 大二学生</div><div class="testimonial-role">湖南城市学院 · 计算机专业</div></div>
+                <div class="testimonial-card"><div class="testimonial-text">"心小橙的抖音短视频太治愈了！每次看完都觉得心情放松了很多。这种轻松的方式比传统的说教更容易让人接受心理健康知识，真的很有创意！"</div><div class="testimonial-author">李同学 · 大三学生</div><div class="testimonial-role">抖音创作者 · 校园达人</div></div>
+                <div class="testimonial-card"><div class="testimonial-text">"图书馆门口的心小橙展板太可爱了！我特意拍照发朋友圈，没想到引来很多同学点赞和评论，大家都开始关注心理健康话题了，心小橙真的很有影响力！"</div><div class="testimonial-author">张同学 · 大四学生</div><div class="testimonial-role">校园自媒体达人 · 粉丝10000+</div></div>
+                <div class="testimonial-card"><div class="testimonial-text">"作为一名辅导员，我深感心小橙IP形象在学生中的影响力。学生们对这个可爱的形象非常有认同感，心理健康教育的效果明显提升。"</div><div class="testimonial-author">陈老师</div><div class="testimonial-role">湖南城市学院 · 辅导员</div></div>
+            </div>
+        </section>
+
+        <section class="media-assets">
+            <span class="section-badge" style="background: white;">宣传素材库</span>
+            <h2 style="margin-top: 0;">8大类型宣传素材 · 按需取用</h2>
+            <div class="media-grid">
+                <div class="media-card"><div class="media-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20various%20emotion%20stickers%20floating%20hearts%20expressions%20sticker%20pack%20luxury%20minimal%20colorful%20digital%20artwork%20professional%20design&image_size=landscape_4_3" alt="表情包素材"></div><div class="media-content"><div class="media-title">社交媒体表情包（50+款）</div><div class="media-desc">系列心小橙表情包，涵盖日常问候、情感表达、鼓励安慰等场景。适用于微信、QQ等社交平台传播，让聊天更有温度。</div></div></div>
+                <div class="media-card"><div class="media-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20smartphone%20wallpaper%20sunrise%20positive%20affirmation%20mobile%20display%20luxury%20minimal%20elegant%20warm%20design%20professional&image_size=landscape_4_3" alt="壁纸素材"></div><div class="media-content"><div class="media-title">数字壁纸系列（20+款）</div><div class="media-desc">手机壁纸、屏保、聊天背景等数字产品，让心小橙的温暖时刻陪伴用户的数字生活，每天醒来都有好心情。</div></div></div>
+                <div class="media-card"><div class="media-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20video%20intro%20animation%20sparkles%20brand%20logo%20youtube%20intro%20luxury%20minimal%20motion%20graphics%20professional%20design&image_size=landscape_4_3" alt="视频模板"></div><div class="media-content"><div class="media-title">短视频模板（15+款）</div><div class="media-desc">提供心小橙主题的视频开场、结尾、转场模板，方便快速制作心理健康主题短视频内容，让创作更高效。</div></div></div>
+                <div class="media-card"><div class="media-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20bookmark%20notebook%20mockup%20stationery%20products%20luxury%20minimal%20warm%20elegant%20professional%20design&image_size=landscape_4_3" alt="周边素材"></div><div class="media-content"><div class="media-title">周边产品素材（10+类）</div><div class="media-desc">书签、明信片、笔记本、帆布包等周边产品的设计源文件，方便制作实体宣传品，让心小橙走进生活每个角落。</div></div></div>
+                <div class="media-card"><div class="media-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20presentation%20slides%20mental%20health%20tips%20powerpoint%20template%20luxury%20minimal%20elegant%20professional%20academic%20design&image_size=landscape_4_3" alt="PPT模板"></div><div class="media-content"><div class="media-title">PPT演示模板（8+套）</div><div class="media-desc">心理健康教育主题的PPT模板，融入心小橙元素，适合班会、讲座等场景使用，让课堂更加生动有趣。</div></div></div>
+                <div class="media-card"><div class="media-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20greeting%20cards%20hearts%20flowers%20holiday%20celebration%20luxury%20minimal%20warm%20wishes%20professional%20design&image_size=landscape_4_3" alt="贺卡素材"></div><div class="media-content"><div class="media-title">节日贺卡系列（12+款）</div><div class="media-desc">心理健康日的问候贺卡，情人节、教师节等节日祝福模板，传递温暖与关怀，让每一个节日都有心小橙的陪伴。</div></div></div>
+            </div>
+        </section>
+
+        <section class="activity-calendar">
+            <span class="section-badge" style="background: white;">活动规划</span>
+            <h2 style="margin-top: 0;">年度宣传活动日历 · 8大主题活动</h2>
+            <div class="calendar-grid">
+                <div class="calendar-card"><div class="calendar-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20spring%20flowers%20butterflies%20new%20semester%20mental%20adjustment%20luxury%20minimal%20elegant%20sage%20green%20warm%20atmosphere&image_size=landscape_4_3" alt="春季"></div><div class="calendar-content"><div class="calendar-title">春季心理调适（3-4月）</div><div class="calendar-desc">开学季心理适应、春季情绪管理等主题宣传，帮助学生顺利度过开学适应期，重拾学习状态。</div></div></div>
+                <div class="calendar-card"><div class="calendar-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20525%20mental%20health%20month%20celebration%20green%20ribbon%20balloons%20luxury%20minimal%20elegant%20warm%20celebration%20atmosphere&image_size=landscape_4_3" alt="525"></div><div class="calendar-content"><div class="calendar-title">5·25心理健康月（5月）</div><div class="calendar-desc">年度重点宣传期，系列主题活动、心小橙IP形象推广、全校心理健康知识竞赛等，活动参与人次预计5000+。</div></div></div>
+                <div class="calendar-card"><div class="calendar-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20beach%20summer%20vacation%20relaxing%20sunglasses%20coconut%20luxury%20minimal%20elegant%20warm%20sunshine%20professional%20design&image_size=landscape_4_3" alt="夏季"></div><div class="calendar-content"><div class="calendar-title">夏季心灵SPA（6-8月）</div><div class="calendar-desc">暑假心理调适、暑期实习心理建设等主题宣传，让心小橙陪伴学生度过充实假期，保持积极心态。</div></div></div>
+                <div class="calendar-card"><div class="calendar-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20backpack%20books%20new%20school%20year%20autumn%20semester%20luxury%20minimal%20elegant%20warm%20campus%20atmosphere%20professional&image_size=landscape_4_3" alt="秋季"></div><div class="calendar-content"><div class="calendar-title">秋季迎新宣传（9月）</div><div class="calendar-desc">新生入学心理适应、职业规划心理准备等主题宣传，助力新生顺利融入大学生活，开启人生新篇章。</div></div></div>
+                <div class="calendar-card"><div class="calendar-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20studying%20open%20books%20lamp%20exam%20season%20stress%20management%20luxury%20minimal%20elegant%20warm%20desk%20professional&image_size=landscape_4_3" alt="考试季"></div><div class="calendar-content"><div class="calendar-title">考试季减压（11-12月/学期末）</div><div class="calendar-desc">期中期末考试心理调适、考前焦虑缓解等主题宣传，心小橙陪你轻松应考，发挥最佳状态。</div></div></div>
+                <div class="calendar-card"><div class="calendar-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20graduation%20cap%20throwing%20air%20celebration%20future%20aspirations%20luxury%20minimal%20elegant%20warm%20ceremony%20professional&image_size=landscape_4_3" alt="毕业季"></div><div class="calendar-content"><div class="calendar-title">毕业季关怀（5-6月）</div><div class="calendar-desc">毕业生心理疏导、求职心理准备、未来规划等主题宣传，为青春留下一份温暖，祝福前程似锦。</div></div></div>
+                <div class="calendar-card"><div class="calendar-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20world%20mental%20health%20day%20green%20ribbon%20globe%20global%20awareness%20luxury%20minimal%20elegant%20international%20professional&image_size=landscape_4_3" alt="世界精神卫生日"></div><div class="calendar-content"><div class="calendar-title">世界精神卫生日（10月10日）</div><div class="calendar-desc">10月10日世界精神卫生日主题宣传，提升全校心理健康意识，传播正能量，让爱与关怀在全球流动。</div></div></div>
+                <div class="calendar-card"><div class="calendar-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20warm%20scarf%20snowflakes%20winter%20self-care%20hot%20cocoa%20cozy%20atmosphere%20luxury%20minimal%20elegant%20warm%20professional&image_size=landscape_4_3" alt="冬季"></div><div class="calendar-content"><div class="calendar-title">冬季暖心行动（12-2月）</div><div class="calendar-desc">冬季情绪管理、年末心理盘点等主题宣传，让心小橙温暖你的整个冬天，让寒冷的季节也有温暖的陪伴。</div></div></div>
+            </div>
+        </section>
+
+        <section class="application-section">
+            <span class="section-badge" style="background: white;">理想应用场景</span>
+            <h2 style="margin-top: 0;">心小橙IP形象的8大应用场景</h2>
+            <div class="application-grid">
+                <div class="application-card"><div class="application-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20welcoming%20students%20university%20counseling%20center%20entrance%20luxury%20minimal%20elegant%20warm%20signage%20professional%20design&image_size=landscape_4_3" alt="心理咨询中心"></div><div class="application-content"><div class="application-title">心理咨询中心</div><div class="application-desc">作为心理健康教育中心的官方IP形象，心小橙可在咨询中心入口、接待处、等候区等位置展示，为来访学生提供温暖的心理支持体验，降低初次咨询的心理门槛。</div></div></div>
+                <div class="application-card"><div class="application-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20digital%20billboard%20university%20library%20campus%20propaganda%20screen%20luxury%20minimal%20elegant%20gold%20sage%20professional%20design&image_size=landscape_4_3" alt="校园媒体"></div><div class="application-content"><div class="application-title">校园媒体宣传</div><div class="application-desc">应用于校园电子屏、官方网站、官方微信公众号、微博、抖音等新媒体平台，形成全方位的线上宣传矩阵。预计覆盖校园20+电子屏点位，日均触达5000+人次。</div></div></div>
+                <div class="application-card"><div class="application-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20event%20backdrop%20banner%20campus%20festival%20mental%20health%20booth%20luxury%20minimal%20elegant%20warm%20celebration%20professional&image_size=landscape_4_3" alt="心理健康活动"></div><div class="application-content"><div class="application-title">心理健康活动</div><div class="application-desc">应用于5·25心理健康月、世界精神卫生日等大型活动的宣传物料，包括背景板、海报、签名墙、宣传单页、互动道具等，让每一场活动都充满温暖与欢乐。</div></div></div>
+                <div class="application-card"><div class="application-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20student%20handmade%20mental%20health%20poster%20dormitory%20user-generated%20content%20luxury%20minimal%20elegant%20warm%20professional&image_size=landscape_4_3" alt="学生创作"></div><div class="application-content"><div class="application-title">学生创作素材</div><div class="application-desc">为学生提供心小橙PSD源文件、PNG透明背景素材等，方便学生进行二次创作，应用于班会PPT、社团活动宣传、朋友圈分享等场景，激发学生创造力。</div></div></div>
+                <div class="application-card"><div class="application-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20university%20guidance%20signage%20pointing%20counseling%20center%20campus%20wayfinding%20luxury%20minimal%20elegant%20professional%20design&image_size=landscape_4_3" alt="校园导视"></div><div class="application-content"><div class="application-title">校园导视系统</div><div class="application-desc">将心小橙形象融入校园心理健康导视系统，在图书馆、宿舍楼、食堂、体育馆等显眼位置设置引导标识，让寻求帮助变得简单便捷。</div></div></div>
+                <div class="application-card"><div class="application-image"><img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20orange%20mascot%20xin%20xiao%20cheng%20online%20counseling%20app%20interface%20screen%20digital%20mental%20health%20service%20luxury%20minimal%20elegant%20professional%20design&image_size=landscape_4_3" alt="线上平台"></div><div class="application-content"><div class="application-title">线上服务平台</div><div class="application-desc">应用于心理健康教育中心线上服务平台，包括开屏画面、加载动画、欢迎界面、在线咨询窗口、预约系统等数字触点，提供24小时温暖服务。</div></div></div>
+            </div>
+        </section>
+
+        <section class="pricing-section">
+            <span class="section-badge" style="background: white;">服务方案</span>
+            <h2 style="margin-top: 0;">透明价格 · 灵活选择 · 专业服务</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card"><div class="pricing-icon"></div><div class="pricing-name">基础版</div><div class="pricing-desc">单次活动宣传</div><div class="pricing-price"><span>¥</span>面议</div><ul class="pricing-features"><li>主题海报设计1套（3张）</li><li>社交媒体配图6张</li><li>活动易拉宝1个</li><li>电子宣传单页1份</li><li>基础版权授权</li><li>30天售后服务</li></ul><a href="mailto:1376626192@qq.com" class="pricing-btn">立即咨询</a></div>
+                <div class="pricing-card featured"><div class="pricing-badge">热门推荐</div><div class="pricing-icon"></div><div class="pricing-name">标准版</div><div class="pricing-desc">学期宣传服务</div><div class="pricing-price"><span>¥</span>根据需求</div><ul class="pricing-features"><li>全学期活动海报设计（12套）</li><li>每周社交媒体内容（16篇）</li><li>线下宣传物料全套</li><li>主题短视频6条</li><li>心小橙表情包授权</li><li>全程策划支持</li><li>60天售后服务</li></ul><a href="mailto:1376626192@qq.com" class="pricing-btn">获取报价</a></div>
+                <div class="pricing-card"><div class="pricing-icon"></div><div class="pricing-name">定制版</div><div class="pricing-desc">年度品牌服务</div><div class="pricing-price"><span>¥</span>专属定制</div><ul class="pricing-features"><li>全年宣传策划执行</li><li>品牌视觉系统建立</li><li>全媒体平台运营</li><li>原创内容持续输出</li><li>IP形象深度定制</li><li>专属团队对接</li><li>全年无限售后</li></ul><a href="mailto:1376626192@qq.com" class="pricing-btn">联系我们</a></div>
+            </div>
+            <div class="purchase-guide"><h3>专业服务流程</h3><div class="purchase-steps"><div class="purchase-step"><div class="step-number">1</div><div class="step-title">选择方案</div><div class="step-desc">根据宣传需求和预算，选择合适的版本套餐</div></div><div class="purchase-step"><div class="step-number">2</div><div class="step-title">联系咨询</div><div class="step-desc">通过邮箱或微信联系我们，明确具体需求</div></div><div class="purchase-step"><div class="step-number">3</div><div class="step-title">签订合同</div><div class="step-desc">确认方案细节，签订服务协议</div></div><div class="purchase-step"><div class="step-number">4</div><div class="step-title">交付使用</div><div class="step-desc">按约定时间交付全部宣传素材</div></div></div></div>
+        </section>
+
+        <section class="section">
+            <span class="section-badge">作品参数</span>
+            <h2>作品详细参数 · 标准化规格</h2>
+            <div class="specs-container">
+                <div class="specs-title">作品规格说明</div>
+                <div class="specs-grid">
+                    <div class="spec-item"><div class="spec-label">作品名称</div><div class="spec-value">心小橙IP形象宣传作品</div></div>
+                    <div class="spec-item"><div class="spec-label">作品类型</div><div class="spec-value">宣传作品类</div></div>
+                    <div class="spec-item"><div class="spec-label">参赛组别</div><div class="spec-value">2026年"橙心向阳"心理主题文创设计大赛</div></div>
+                    <div class="spec-item"><div class="spec-label">IP形象定位</div><div class="spec-value">心理健康教育吉祥物/品牌符号</div></div>
+                    <div class="spec-item"><div class="spec-label">设计风格</div><div class="spec-value">温暖治愈系 · 拟人化橙子形象</div></div>
+                    <div class="spec-item"><div class="spec-label">主色调</div><div class="spec-value">哑光金 #C9A962 / 皇室金 #D4AF37</div></div>
+                    <div class="spec-item"><div class="spec-label">辅助色调</div><div class="spec-value">墨玉绿 #2D4A3E / 烟熏紫 #7B6B80</div></div>
+                    <div class="spec-item"><div class="spec-label">IP特征</div><div class="spec-value">圆润可爱 · 头顶绿叶 · 大眼睛 · 温暖笑容</div></div>
+                    <div class="spec-item"><div class="spec-label">性格设定</div><div class="spec-value">温暖治愈 · 乐观积极 · 陪伴守护 · 善解人意</div></div>
+                    <div class="spec-item"><div class="spec-label">象征意义</div><div class="spec-value">橙心向阳 · 阳光活力 · 生命希望 · 温暖陪伴</div></div>
+                    <div class="spec-item"><div class="spec-label">宣传渠道</div><div class="spec-value">微信公众号/抖音/小红书/微博/线下/邮件</div></div>
+                    <div class="spec-item"><div class="spec-label">素材格式</div><div class="spec-value">PSD/PNG/JPG/MP4/AVI/PPT/PDF</div></div>
+                    <div class="spec-item"><div class="spec-label">应用场景</div><div class="spec-value">校园文化建设/心理健康教育/活动宣传/新媒体运营</div></div>
+                    <div class="spec-item"><div class="spec-label">目标受众</div><div class="spec-value">在校大学生（20000+）/ 校园教职工</div></div>
+                    <div class="spec-item"><div class="spec-label">品牌理念</div><div class="spec-value">用心传递温暖，用爱守护心灵</div></div>
+                    <div class="spec-item"><div class="spec-label">核心主题</div><div class="spec-value">润心养性 · 启智益德 · 橙心向阳</div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-impact">
+            <span class="section-badge" style="background: white;">社会影响</span>
+            <h2 style="margin-top: 0;">社会价值 · 深远影响 · 治愈力量</h2>
+            <div class="social-impact-grid">
+                <div class="impact-item"><div class="impact-icon"></div><div class="impact-title">心理健康意识提升</div><div class="impact-desc">通过可爱的IP形象和多元宣传，让心理健康教育更加贴近年轻人，推动校园心理健康文化建设，提升全校师生心理健康意识。预计影响人数15000+。</div></div>
+                <div class="impact-item"><div class="impact-icon"></div><div class="impact-title">情感支持与陪伴</div><div class="impact-desc">为孤独、焦虑的人群提供情感支持，用无声的陪伴传递温暖。让每一个需要温暖的心都能找到慰藉，让校园充满爱与关怀。</div></div>
+                <div class="impact-item"><div class="impact-icon"></div><div class="impact-title">正能量传播</div><div class="impact-desc">以"橙心向阳"为品牌精神，传递积极乐观的生活态度。让正能量在社会中不断传递与扩散，成为校园文化建设的重要组成部分。</div></div>
+                <div class="impact-item"><div class="impact-icon"></div><div class="impact-title">校园文化建设</div><div class="impact-desc">深度融入湖南城市学院心理健康教育中心的育人理念，为校园文化建设贡献力量，打造独具特色的心理健康教育品牌。</div></div>
+            </div>
+        </section>
+
+        <section class="competition-section">
+            <span class="section-badge" style="background: white;">获奖优势</span>
+            <h2 style="margin-top: 0;">完美契合大赛评审五大要点</h2>
+            <div class="competition-grid">
+                <div class="competition-card"><div class="competition-icon"></div><div class="competition-title">主题契合度 · 25分</div><div class="competition-desc">紧扣心理健康教育主题，通过温暖的IP形象和多元化宣传作品传递陪伴与疗愈力量，完美呼应"橙心向阳"大赛主题与"润心养性·启智益德"育人理念。</div></div>
+                <div class="competition-card"><div class="competition-icon"></div><div class="competition-title">创意独特性 · 25分</div><div class="competition-desc">拟人化橙子形象独特新颖，治愈系设计符合当代年轻人审美潮流。差异化竞争优势明显，具有成为优秀IP形象的潜力。</div></div>
+                <div class="competition-card"><div class="competition-icon"></div><div class="competition-title">传播可行性 · 20分</div><div class="competition-desc">宣传作品实用性强，30+传播渠道覆盖线上线下。形式新颖有趣，成本可控，传播效果可量化评估，可持续运营。</div></div>
+                <div class="competition-card"><div class="competition-icon"></div><div class="competition-title">情感价值 · 15分</div><div class="competition-desc">通过温暖的IP形象和多元的宣传内容，让受众在传播中获得心灵慰藉。品牌故事动人，情感连接强烈，治愈效果显著。</div></div>
+            </div>
+            <div class="judging-criteria">
+                <div class="criteria-title">五大评审要点完整对应</div>
+                <ul class="criteria-list">
+                    <li><strong>主题性（25分）：</strong>准确捕捉心理健康教育主题，通过温暖的IP形象和多元化宣传作品传递陪伴与疗愈力量，完美契合"橙心向阳"大赛精神，呼应"润心养性·启智益德"理念</li>
+                    <li><strong>创意性（25分）：</strong>拟人化橙子形象独特新颖，治愈系设计符合当代审美潮流。差异化竞争优势明显，具有鲜明的IP特色和记忆点</li>
+                    <li><strong>实用性（20分）：</strong>宣传作品实用性强，30+传播渠道多样，形式新颖有趣，成本可控，传播效果可量化评估，可持续运营发展</li>
+                    <li><strong>完整性（15分）：</strong>设计说明清晰完整，宣传方案详细全面，提交材料齐全规范。品牌识别系统完整，展现专业水准</li>
+                    <li><strong>校园文化特色（15分）：</strong>巧妙融入心理健康教育中心元素，橙色主题与校园文化完美呼应。具有独特的学校辨识度和湖湘文化特色</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <span class="section-badge" style="background: white;">联系我们</span>
+            <h2 style="margin-top: 0;">获取更多服务 · 携手传播温暖</h2>
+            <div class="contact-grid">
+                <div class="contact-card"><div class="contact-icon"></div><div class="contact-title">邮箱联系</div><div class="contact-info"><strong>1376626192@qq.com</strong><br>工作日 9:00-18:00 快速响应</div></div>
+                <div class="contact-card"><div class="contact-icon"></div><div class="contact-title">咨询地址</div><div class="contact-info"><strong>湖南城市学院心理健康教育中心</strong><br>期待与您携手传播温暖</div></div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-title">湖南城市学院心理健康教育中心</div>
+            <div class="footer-subtitle">心小橙IP形象 · 宣传作品设计方案</div>
+            <div class="footer-info">2026年"橙心向阳"心理主题文创设计大赛 · 宣传作品类</div>
+            <div class="footer-info">作品类型：宣传作品类 | 设计主题：温暖陪伴 · 治愈心灵 · 橙心向阳</div>
+            <div class="footer-info">品牌理念：用心传递温暖，用爱守护心灵</div>
+            <div class="footer-copyright">
+                <p>参赛作品 · 冲击最高奖项 · 彰显专业实力</p>
+                <p>作品使用权归心理健康教育中心所有，作者享有署名权</p>
+                <p>提交邮箱：1376626192@qq.com | 截止日期：2026年4月28日 17:00</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
